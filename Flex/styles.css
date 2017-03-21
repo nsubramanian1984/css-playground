@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.box {
+    height: 100vh;
+    width: 100vw;
+}
+.gray {
+    background-color: gray;
+    animation: 4s linear 0s infinite alternate swap, 8s linear 0s infinite alternate revert;
+}
+.yellow {
+    background-color: yellow;
+}
+.cyan {
+    background-color: cyan;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.magenta {
+    background-color: magenta;
+}
+@keyframes swap {
+    from {
+        order: 1;
+    }
+    to {
+        order: 5;
+    }
+}
+@keyframes revert {
+    from {
+        order: 5;
+    }
+    to {
+        order: 1;
+    }
+}
+
+}
