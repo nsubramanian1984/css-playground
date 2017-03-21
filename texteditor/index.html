@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<style>
+    .left {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .center {
+        display: table;
+        margin: 0 auto;
+    }
+    
+    div.editor {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .button {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        margin-right: 2px;
+        background: url("sprite-outline.png") 0 0 no-repeat;
+    }
+    
+    .button:hover {
+        border: 1px solid darkblue;
+    }
+    
+    .button.leftAlign {
+        /*background-position: -132px 0px;
+        background-size: cover;*/
+        background-position: -113px -1px;
+    }
+    
+    .button.centerAlign {
+        /*background-position: -150px 0px;
+        background-size: cover;*/
+        background-position: -129px -1px;
+    }
+    
+    .button.rightAlign {
+        /*background-position: -168px 0px;
+        background-size: cover;*/
+        background-position: -145px -1px;
+    }
+    
+    span {
+        position: relative;
+    }
+</style>
+
+<body>
+    <div class="button leftAlign"></div>
+    <div class="button centerAlign"></div>
+    <div class="button rightAlign"></div>
+    <div class="editor"> <span class="center">Text editor</span>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var btn = document.getElementsByClassName("button leftAlign");
+
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+    btn = document.getElementsByClassName("button centerAlign");
+
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+    btn = document.getElementsByClassName("button rightAlign");
+
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    function onClick(e) {
+        var editorItem = document.getElementsByClassName("editor");
+        var childNodes = editorItem[0] && editorItem[0].childNodes && editorItem[0].childNodes;
+
+        switch (e.target.className) {
+            case "button leftAlign":
+                childNodes[1].className = "left";
+                break;
+            case "button centerAlign":
+                childNodes[1].className = "center";
+                break;
+            case "button rightAlign":
+                childNodes[1].className = "right";
+                break;
+            default:
+                console.log("defaulty");
+                break;
+        }
+
+
+    }
+
+</script>
+
+</html>
