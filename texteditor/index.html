@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <style>
     .left {
         float: left;
@@ -44,8 +43,14 @@
         background: url("sprite.png") 0 0 no-repeat;
     }
     
-    .button:hover {
-        /*border: 1px solid darkblue;*/
+    .button:hover::after {
+        color: slategray;
+        content: attr(data-name);
+        font: italic normal 12px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        height: 15px;
+        position: absolute;
+        width: 20px;
+        top: 30px;
     }
     
     .button.leftAlign {
@@ -108,12 +113,12 @@
 </style>
 
 <body>
-    <div class="button leftAlign"></div>
-    <div class="button centerAlign"></div>
-    <div class="button rightAlign"></div>
-    <div class="button justify"></div>
-    <div class="button bold"></div>
-    <div class="button italic"></div>
+    <div class="button leftAlign" data-attr="align" data-name="left"></div>
+    <div class="button centerAlign selected" data-attr="align" data-name="center"></div>
+    <div class="button rightAlign" data-attr="align" data-name="right"></div>
+    <div class="button justify" data-attr="align" data-name="justify"></div>
+    <div class="button bold" data-name="bold"></div>
+    <div class="button italic" data-name="italic"></div>
     <div class="editor">
         <span class="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis,
@@ -123,8 +128,9 @@
             libero turpis, quis vulputate ante ornare in. Vestibulum sed nulla eget mauris vestibulum
             gravida vitae sit amet lorem. Ut ac libero congue, laoreet lorem ut, interdum odio.
             Sed convallis, mi nec ultrices commodo, libero tellus ullamcorper elit, at maximus leo
-            justo id metus. Nulla facilisis ipsum nec nunc eleifend tempus. Nam tempus malesuada dolor ut blandit.
-            </span>
+            justo id metus. Nulla facilisis ipsum nec nunc eleifend tempus. Nam tempus malesuada dolor
+            ut blandit.
+        </span>
     </div>
 </body>
 
@@ -148,6 +154,28 @@
     btn[0] && btn[0].addEventListener("click", onClick, false);
 
     function onClick(e) {
+
+        function switchAlignment(element) {
+            //Remove selected from all content alignment options.
+            var nodes = document.querySelectorAll('[data-attr="align"]');
+
+            nodes.forEach(function (item) {
+                item.className = item.className.replace("selected", "");
+                item.className = item.className.trim();
+            });
+
+            if (element.className.indexOf("selected") < 0)
+                element.className += " selected";
+        }
+
+        function switchFontStyle(element) {
+            if (element.className.indexOf("selected") < 0)
+                element.className += " selected";
+            else
+                element.className = element.className.replace(" selected", "");
+        }
+
+        // Entry point
         var editorItem = document.getElementsByClassName("editor");
         var childNodes = editorItem[0] && editorItem[0].childNodes && editorItem[0].childNodes;
 
@@ -160,6 +188,8 @@
                 childNodes[1].className = childNodes[1].className.replace("center", "");
                 childNodes[1].className = childNodes[1].className.replace("justify", "");
 
+                switchAlignment(e.target);
+
                 break;
             case "button centerAlign":
                 // childNodes[1].className = "center";
@@ -169,6 +199,8 @@
                 childNodes[1].className = childNodes[1].className.replace("right", "");
                 childNodes[1].className = childNodes[1].className.replace("left", "");
                 childNodes[1].className = childNodes[1].className.replace("justify", "");
+                switchAlignment(e.target);
+
                 break;
             case "button rightAlign":
                 // childNodes[1].className = "right";
@@ -178,6 +210,8 @@
                 childNodes[1].className = childNodes[1].className.replace("left", "");
                 childNodes[1].className = childNodes[1].className.replace("center", "");
                 childNodes[1].className = childNodes[1].className.replace("justify", "");
+
+                switchAlignment(e.target);
 
                 break;
             case "button justify":
@@ -189,6 +223,8 @@
                 childNodes[1].className = childNodes[1].className.replace("center", "");
                 childNodes[1].className = childNodes[1].className.replace("right", "");
 
+                switchAlignment(e.target);
+
                 break;
             case "button bold":
             case "button bold selected":
@@ -197,11 +233,7 @@
                 else
                     childNodes[1].className = childNodes[1].className.replace("bold", "");
 
-                console.log(e.target.className);
-                if (e.target.className.indexOf("selected") < 0)
-                    e.target.className += " selected";
-                else
-                    e.target.className = e.target.className.replace(" selected", "");
+                switchFontStyle(e.target);
                 break;
             case "button italic":
             case "button italic selected":
@@ -210,10 +242,7 @@
                 else
                     childNodes[1].className = childNodes[1].className.replace("italic", "");
 
-                if (e.target.className.indexOf("selected") < 0)
-                    e.target.className += " selected";
-                else
-                    e.target.className = e.target.className.replace(" selected", "");
+                switchFontStyle(e.target);
                 break;
             default:
                 console.log("default");
