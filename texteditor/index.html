@@ -15,6 +15,14 @@
         margin: 0 auto;
     }
     
+    .bold {
+        font-weight: bold;
+    }
+    
+    .italic {
+        font-style: italic;
+    }
+    
     div.editor {
         width: 100%;
         overflow: hidden;
@@ -31,7 +39,7 @@
     }
     
     .button:hover {
-        border: 1px solid darkblue;
+        /*border: 1px solid darkblue;*/
     }
     
     .button.leftAlign {
@@ -52,6 +60,18 @@
         background-position: -145px -1px;
     }
     
+    .button.bold {
+        background-position: -1px -1px;
+    }
+    
+    .button.italic {
+        background-position: -17px -1px;
+    }
+    
+    .selected {
+        border: 1px solid red;
+    }
+    
     span {
         position: relative;
     }
@@ -61,19 +81,26 @@
     <div class="button leftAlign"></div>
     <div class="button centerAlign"></div>
     <div class="button rightAlign"></div>
+    <div class="button bold"></div>
+    <div class="button italic"></div>
     <div class="editor"> <span class="center">Text editor</span>
     </div>
 </body>
 
 <script type="text/javascript">
     var btn = document.getElementsByClassName("button leftAlign");
-
     btn[0] && btn[0].addEventListener("click", onClick, false);
+
     btn = document.getElementsByClassName("button centerAlign");
-
     btn[0] && btn[0].addEventListener("click", onClick, false);
-    btn = document.getElementsByClassName("button rightAlign");
 
+    btn = document.getElementsByClassName("button rightAlign");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    btn = document.getElementsByClassName("button bold");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    btn = document.getElementsByClassName("button italic");
     btn[0] && btn[0].addEventListener("click", onClick, false);
 
     function onClick(e) {
@@ -82,20 +109,63 @@
 
         switch (e.target.className) {
             case "button leftAlign":
-                childNodes[1].className = "left";
+                if (childNodes[1].className.indexOf("left") < 0)
+                    childNodes[1].className += " left ";
+
+                childNodes[1].className = childNodes[1].className.replace("right", "");
+                childNodes[1].className = childNodes[1].className.replace("center", "");
+
+
                 break;
             case "button centerAlign":
-                childNodes[1].className = "center";
+                // childNodes[1].className = "center";
+                if (childNodes[1].className.indexOf("center") < 0)
+                    childNodes[1].className += " center ";
+
+                childNodes[1].className = childNodes[1].className.replace("right", "");
+                childNodes[1].className = childNodes[1].className.replace("left", "");
+
                 break;
             case "button rightAlign":
-                childNodes[1].className = "right";
+                // childNodes[1].className = "right";
+                if (childNodes[1].className.indexOf("right") < 0)
+                    childNodes[1].className += " right ";
+
+                childNodes[1].className = childNodes[1].className.replace("left", "");
+                childNodes[1].className = childNodes[1].className.replace("center", "");
+
+                break;
+            case "button bold":
+            case "button bold selected":
+                if (childNodes[1].className.indexOf("bold") < 0)
+                    childNodes[1].className += " bold ";
+                else
+                    childNodes[1].className = childNodes[1].className.replace("bold", "");
+
+                console.log(e.target.className);
+                if (e.target.className.indexOf("selected") < 0)
+                    e.target.className += " selected";
+                else
+                    e.target.className = e.target.className.replace(" selected", "");
+                break;
+            case "button italic":
+            case "button italic selected":
+                if (childNodes[1].className.indexOf("italic") < 0)
+                    childNodes[1].className += " italic ";
+                else
+                    childNodes[1].className = childNodes[1].className.replace("italic", "");
+
+                if (e.target.className.indexOf("selected") < 0)
+                    e.target.className += " selected";
+                else
+                    e.target.className = e.target.className.replace(" selected", "");
                 break;
             default:
                 console.log("defaulty");
                 break;
         }
 
-
+        childNodes[1].className = childNodes[1].className.trim();
     }
 
 </script>
