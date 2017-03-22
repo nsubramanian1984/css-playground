@@ -15,6 +15,12 @@
         margin: 0 auto;
     }
     
+    .justify {
+        display: block;
+        clear: both;
+        margin: 0px;
+    }
+    
     .bold {
         font-weight: bold;
     }
@@ -35,7 +41,7 @@
         border: 1px solid gray;
         margin-bottom: 10px;
         margin-right: 2px;
-        background: url("sprite-outline.png") 0 0 no-repeat;
+        background: url("sprite.png") 0 0 no-repeat;
     }
     
     .button:hover {
@@ -60,6 +66,12 @@
         background-position: -145px -1px;
     }
     
+    .button.justify {
+        /*background-position: -168px 0px;
+        background-size: cover;*/
+        background-position: -161px -1px;
+    }
+    
     .button.bold {
         background-position: -1px -1px;
     }
@@ -74,6 +86,24 @@
     
     span {
         position: relative;
+        max-width: 100%;
+        padding: 50px 100px;
+    }
+    
+    span.left {
+        text-align: left;
+    }
+    
+    span.right {
+        text-align: right;
+    }
+    
+    span.center {
+        text-align: center;
+    }
+    
+    span.justify {
+        text-align: justify;
     }
 </style>
 
@@ -81,9 +111,20 @@
     <div class="button leftAlign"></div>
     <div class="button centerAlign"></div>
     <div class="button rightAlign"></div>
+    <div class="button justify"></div>
     <div class="button bold"></div>
     <div class="button italic"></div>
-    <div class="editor"> <span class="center">Text editor</span>
+    <div class="editor">
+        <span class="center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis,
+            lacus non luctus venenatis, sapien sapien sagittis diam, at suscipit magna tortor in nisl.
+            Curabitur et tempor nibh. Integer tincidunt neque et vestibulum pulvinar. Nam dolor dolor,
+            fringilla quis vestibulum eget, auctor nec tortor. Morbi lacinia tempor lacus. Sed porttitor
+            libero turpis, quis vulputate ante ornare in. Vestibulum sed nulla eget mauris vestibulum
+            gravida vitae sit amet lorem. Ut ac libero congue, laoreet lorem ut, interdum odio.
+            Sed convallis, mi nec ultrices commodo, libero tellus ullamcorper elit, at maximus leo
+            justo id metus. Nulla facilisis ipsum nec nunc eleifend tempus. Nam tempus malesuada dolor ut blandit.
+            </span>
     </div>
 </body>
 
@@ -95,6 +136,9 @@
     btn[0] && btn[0].addEventListener("click", onClick, false);
 
     btn = document.getElementsByClassName("button rightAlign");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    btn = document.getElementsByClassName("button justify");
     btn[0] && btn[0].addEventListener("click", onClick, false);
 
     btn = document.getElementsByClassName("button bold");
@@ -114,7 +158,7 @@
 
                 childNodes[1].className = childNodes[1].className.replace("right", "");
                 childNodes[1].className = childNodes[1].className.replace("center", "");
-
+                childNodes[1].className = childNodes[1].className.replace("justify", "");
 
                 break;
             case "button centerAlign":
@@ -124,7 +168,7 @@
 
                 childNodes[1].className = childNodes[1].className.replace("right", "");
                 childNodes[1].className = childNodes[1].className.replace("left", "");
-
+                childNodes[1].className = childNodes[1].className.replace("justify", "");
                 break;
             case "button rightAlign":
                 // childNodes[1].className = "right";
@@ -133,6 +177,17 @@
 
                 childNodes[1].className = childNodes[1].className.replace("left", "");
                 childNodes[1].className = childNodes[1].className.replace("center", "");
+                childNodes[1].className = childNodes[1].className.replace("justify", "");
+
+                break;
+            case "button justify":
+                // childNodes[1].className = "right";
+                if (childNodes[1].className.indexOf("justify") < 0)
+                    childNodes[1].className += " justify ";
+
+                childNodes[1].className = childNodes[1].className.replace("left", "");
+                childNodes[1].className = childNodes[1].className.replace("center", "");
+                childNodes[1].className = childNodes[1].className.replace("right", "");
 
                 break;
             case "button bold":
@@ -161,7 +216,7 @@
                     e.target.className = e.target.className.replace(" selected", "");
                 break;
             default:
-                console.log("defaulty");
+                console.log("default");
                 break;
         }
 
