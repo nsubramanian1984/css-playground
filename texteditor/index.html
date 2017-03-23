@@ -43,14 +43,27 @@
         background: url("sprite.png") 0 0 no-repeat;
     }
     
-    .button:hover::after {
-        color: slategray;
+    .button:hover::before {
+        color: white;
         content: attr(data-name);
         font: italic normal 12px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         height: 15px;
         position: absolute;
-        width: 20px;
         top: 30px;
+        background-color: darkgray;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    
+    .button:hover::after {
+        content: "";
+        border-style: solid;
+        border-color: darkgray transparent;
+        border-top: none;
+        width: 2px;
+        top: 28px;
+        position: absolute;
+        margin-left: 5px;
     }
     
     .button.leftAlign {
@@ -132,6 +145,7 @@
             ut blandit.
         </span>
     </div>
+    <div></div>
 </body>
 
 <script type="text/javascript">
