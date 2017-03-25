@@ -310,23 +310,25 @@
                 break;
             case "button unordered":
             case "button unordered selected":
+                if (childNodes[1].className.indexOf("ordered text_indent") != -1)
+                    childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
+
                 if (childNodes[1].className.indexOf("unordered") < 0)
                     childNodes[1].className += " unordered indent";
                 else
                     childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
 
-                if (childNodes[1].className.indexOf("ordered text_indent") != -1)
-                    childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
                 break;
             case "button ordered":
             case "button ordered selected":
+                if (childNodes[1].className.indexOf("unordered indent") != -1)
+                    childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
+
                 if (childNodes[1].className.indexOf("ordered text_indent") < 0)
                     childNodes[1].className += " ordered text_indent";
                 else
                     childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
 
-                if (childNodes[1].className.indexOf("unordered indent") != -1)
-                    childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
                 break;
             default:
                 console.log("default");
@@ -334,6 +336,7 @@
         }
 
         childNodes[1].className = childNodes[1].className.trim();
+        childNodes[1].className = childNodes[1].className.replace(/(\s){2,}/g, " ");
     }
 </script>
 
