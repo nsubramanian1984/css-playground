@@ -28,6 +28,29 @@
         font-style: italic;
     }
     
+    .underline {
+        text-decoration: underline;
+    }
+    
+    .unordered {
+        display: list-item;
+        list-style-position: inside;
+    }
+    
+    .unordered.indent {
+        text-indent: -30px;
+    }
+    
+    .ordered {
+        display: list-item;
+        list-style-position: inside;
+        list-style-type: decimal;
+    }
+    
+    .ordered.text_indent {
+        text-indent: -16px;
+    }
+    
     div.editor {
         width: 100%;
         overflow: hidden;
@@ -37,7 +60,7 @@
         width: 15px;
         height: 15px;
         display: inline-block;
-        border: 1px solid gray;
+        border: 2px solid gray;
         margin-bottom: 10px;
         margin-right: 2px;
         background: url("sprite.png") 0 0 no-repeat;
@@ -73,20 +96,14 @@
     }
     
     .button.centerAlign {
-        /*background-position: -150px 0px;
-        background-size: cover;*/
         background-position: -129px -1px;
     }
     
     .button.rightAlign {
-        /*background-position: -168px 0px;
-        background-size: cover;*/
         background-position: -145px -1px;
     }
     
     .button.justify {
-        /*background-position: -168px 0px;
-        background-size: cover;*/
         background-position: -161px -1px;
     }
     
@@ -98,8 +115,20 @@
         background-position: -17px -1px;
     }
     
+    .button.underline {
+        background-position: -33px -1px;
+    }
+    
+    .button.unordered {
+        background-position: -65px -1px;
+    }
+    
+    .button.ordered {
+        background-position: -81px -1px;
+    }
+    
     .selected {
-        border: 1px solid red;
+        border: 2px solid red;
     }
     
     span {
@@ -132,6 +161,9 @@
     <div class="button justify" data-attr="align" data-name="justify"></div>
     <div class="button bold" data-name="bold"></div>
     <div class="button italic" data-name="italic"></div>
+    <div class="button underline" data-name="underline"></div>
+    <div class="button unordered" data-name="unordered"></div>
+    <div class="button ordered" data-name="ordered"></div>
     <div class="editor">
         <span class="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis,
@@ -167,13 +199,22 @@
     btn = document.getElementsByClassName("button italic");
     btn[0] && btn[0].addEventListener("click", onClick, false);
 
+    btn = document.getElementsByClassName("button underline");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    btn = document.getElementsByClassName("button unordered");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
+    btn = document.getElementsByClassName("button ordered");
+    btn[0] && btn[0].addEventListener("click", onClick, false);
+
     function onClick(e) {
 
         function switchAlignment(element) {
             //Remove selected from all content alignment options.
             var nodes = document.querySelectorAll('[data-attr="align"]');
 
-            nodes.forEach(function (item) {
+            nodes.forEach(function(item) {
                 item.className = item.className.replace("selected", "");
                 item.className = item.className.trim();
             });
@@ -258,14 +299,45 @@
 
                 switchFontStyle(e.target);
                 break;
+            case "button underline":
+            case "button underline selected":
+                if (childNodes[1].className.indexOf("underline") < 0)
+                    childNodes[1].className += " underline ";
+                else
+                    childNodes[1].className = childNodes[1].className.replace("underline", "");
+
+                switchFontStyle(e.target);
+                break;
+            case "button unordered":
+            case "button unordered selected":
+                if (childNodes[1].className.indexOf("ordered text_indent") != -1)
+                    childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
+
+                if (childNodes[1].className.indexOf("unordered") < 0)
+                    childNodes[1].className += " unordered indent";
+                else
+                    childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
+
+                break;
+            case "button ordered":
+            case "button ordered selected":
+                if (childNodes[1].className.indexOf("unordered indent") != -1)
+                    childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
+
+                if (childNodes[1].className.indexOf("ordered text_indent") < 0)
+                    childNodes[1].className += " ordered text_indent";
+                else
+                    childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
+
+                break;
             default:
                 console.log("default");
                 break;
         }
 
         childNodes[1].className = childNodes[1].className.trim();
+        childNodes[1].className = childNodes[1].className.replace(/(\s){2,}/g, " ");
     }
-
 </script>
 
 </html>
