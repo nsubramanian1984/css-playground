@@ -12,7 +12,7 @@
         left: 50px;
     }
     
-    div.line_B_to_D {
+    div.line_B_to_C {
         height: 129px;
         top: 70px;
         left: 570px;
@@ -43,7 +43,8 @@
         animation-delay: 2s;
         animation-duration: 5s;
         animation-name: slidein;
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
     }
     
     @keyframes slidein {
@@ -51,46 +52,53 @@
             left: 50px;
             opacity: 1;
         }
-        49% {
+        24% {
             opacity: 1;
         }
-        50% {
+        25% {
             top: 45px;
             left: 550px;
             opacity: 0;
         }
-        51% {
+        26% {
             top: 65px;
             left: 565px;
             opacity: 1;
         }
-        99% {
+        49% {
             opacity: 1;
         }
-        100% {
+        50% {
             top: 200px;
             left: 565px;
             opacity: 0;
         }
-        /*51% {
+        51% {
+            top: 215px;
+            left: 555px;
             opacity: 1;
         }
         74% {
+            top: 215px;
+            left: 45px;
             opacity: 1;
         }
         75% {
             opacity: 0;
         }
         76% {
+            top: 200px;
+            left: 25px;
             opacity: 1;
         }
         99% {
             opacity: 1;
         }
         to {
-            left: 50px;
+            left: 25px;
+            top: 50px;
             opacity: 0;
-        }*/
+        }
     }
     
     div.nodes {
@@ -113,12 +121,12 @@
     
     div.nodes.third {
         top: 200px;
-        left: 10px;
+        left: 550px;
     }
     
     div.nodes.fourth {
         top: 200px;
-        left: 550px;
+        left: 10px;
     }
 </style>
 
@@ -130,7 +138,7 @@
     <div class="nodes fourth">D</div>
     <div class="circle"></div>
     <div class="line_A_to_B"></div>
-    <div class="line_B_to_D"></div>
+    <div class="line_B_to_C"></div>
     <div class="line_C_to_D"></div>
     <div class="line_A_to_D"></div>
 
