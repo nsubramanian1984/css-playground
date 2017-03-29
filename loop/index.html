@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<style>
+    div {
+        position: absolute;
+        border: 1px dotted blue;
+    }
+    
+    div.line_A_to_B {
+        width: 500px;
+        top: 50px;
+        left: 50px;
+    }
+    
+    div.line_B_to_D {
+        height: 129px;
+        top: 70px;
+        left: 570px;
+    }
+    
+    div.line_C_to_D {
+        width: 500px;
+        top: 220px;
+        left: 50px;
+    }
+    
+    div.line_A_to_D {
+        height: 129px;
+        top: 70px;
+        left: 30px;
+    }
+    
+    .circle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 2px blur;
+        background-color: green;
+        top: 45px;
+        left: 50px;
+        z-index: 2;
+        animation-delay: 2s;
+        animation-duration: 5s;
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes slidein {
+        from {
+            left: 50px;
+            opacity: 1;
+        }
+        49% {
+            opacity: 1;
+        }
+        50% {
+            top: 45px;
+            left: 550px;
+            opacity: 0;
+        }
+        51% {
+            top: 65px;
+            left: 565px;
+            opacity: 1;
+        }
+        99% {
+            opacity: 1;
+        }
+        100% {
+            top: 200px;
+            left: 565px;
+            opacity: 0;
+        }
+        /*51% {
+            opacity: 1;
+        }
+        74% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        76% {
+            opacity: 1;
+        }
+        99% {
+            opacity: 1;
+        }
+        to {
+            left: 50px;
+            opacity: 0;
+        }*/
+    }
+    
+    div.nodes {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    div.nodes.first {
+        top: 30px;
+        left: 10px;
+    }
+    
+    div.nodes.second {
+        top: 30px;
+        left: 550px;
+    }
+    
+    div.nodes.third {
+        top: 200px;
+        left: 10px;
+    }
+    
+    div.nodes.fourth {
+        top: 200px;
+        left: 550px;
+    }
+</style>
+
+
+<body>
+    <div class="nodes first">A</div>
+    <div class="nodes second">B</div>
+    <div class="nodes third">C</div>
+    <div class="nodes fourth">D</div>
+    <div class="circle"></div>
+    <div class="line_A_to_B"></div>
+    <div class="line_B_to_D"></div>
+    <div class="line_C_to_D"></div>
+    <div class="line_A_to_D"></div>
+
+</html>
