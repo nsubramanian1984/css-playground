@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.container {
+    position: absolute;
+    width: 1000px;
+    height: 200px;
+    border: 2px dotted indianred;
+}
+
+.item {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 180px;
+    margin: 10px;
+
+}
+
+.item.first {
+   border: 1px solid blue;
+}
+.item.second {
+   border: 1px solid crimson;
+   margin: 10px 20px;
+}
+.item.third {
+   border: 1px solid purple;
+   margin: 10px 30px;
+}
+
+.item.first .bold {
+    font-weight: bolder;
+}
+
+.item.first .bold .italic {
+    font-weight: bolder;
+    font-style: italic;
+}*/
+
+.outerframe {
+    width: 400px;
+    height: 400px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid darkorange;
+    box-shadow: 0 0 50px darkorange;
+}
+
+.circle.large {
+    z-index: 3;
+    position: absolute;
+    top: 12%;
+    left: 22%;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    border: 1px solid black;
+    background-color: saddlebrown;
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+}
+
+.row1.shiftDown {
+    margin-bottom: -14px;
+}
+
+.row3.shiftUp {
+    margin-top: -14px;
+}
+
+.row1.indent,
+.row3.indent {
+    padding: 0px 100px;
+}
+
+.row2.indent {
+    padding: 0px 48px;
+}
