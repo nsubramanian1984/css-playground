@@ -57,8 +57,8 @@ body {
 .circle.large {
     z-index: 3;
     position: absolute;
-    top: 12%;
-    left: 22%;
+    top: 69px;
+    left: 132px;
     width: 150px;
     height: 150px;
     border-radius: 75px;
