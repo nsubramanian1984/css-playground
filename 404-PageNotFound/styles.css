@@ -6,12 +6,16 @@
     padding: 10px;
     width: 340px;
     z-index: 2;
+    transform: scale(1.5);
+    margin: 200px auto;
 }
+
 .frame {
     background-color: #635a4e;
     border-radius: 30px;
     width: 270px;
 }
+
 .container {
     border-radius: 30px;
     display: flex;
@@ -19,6 +23,7 @@
     padding: 10px;
     width: 250px;
 }
+
 .controls {
     background-color: #444141;
     border-radius: 30px;
@@ -26,16 +31,20 @@
     padding: 50px 10px;
     width: 40px;
 }
+
 .box {
     width: 250px;
     display: flex;
+    padding: 5px;
 }
+
 .sound-outlet {
     background-color: #9E9E9E;
     height: 5px;
     margin-top: 5px;
     width: 40px;
 }
+
 .circle {
     background-color: white;
     border-radius: 10px;
@@ -43,11 +52,16 @@
     margin: 20px 10px 10px;
     width: 20px;
 }
+
 .legs {
-    margin-top: -2px;
+    position: relative;
+    transform: scale(1.5);
+    margin: 0px auto;
+    margin-top: -130px;
     width: 350px;
     z-index: 1;
 }
+
 .leg.one {
     display: inline-block;
     margin-left: 80px;
@@ -59,6 +73,7 @@
     margin-top: -2px;
     z-index: -10;
 }
+
 .leg.two {
     display: inline-block;
     margin-left: 150px;
@@ -70,13 +85,17 @@
     margin-top: -2px;
     z-index: -10;
 }
+
 .number {
     margin: auto 10px;
+    transform: scale(1.7);
 }
+
 .number p {
     font: 44px Verdana;
     color: white;
 }
+
 .box .face {
     margin: auto 20px;
     width: 100px;
@@ -84,7 +103,9 @@
     border-radius: 75px;
     color: white;
     border: 5px solid white;
+    transform: scale(0.6);
 }
+
 .box .face .eyes-left {
     display: inline-block;
     margin-left: 15px;
@@ -95,6 +116,7 @@
     border: 2px solid white;
     background: red;
 }
+
 .box .face .eyes-right {
     display: inline-block;
     margin-left: 20px;
@@ -103,13 +125,14 @@
     height: 20px;
     border-radius: 10px;
     border: 2px solid white;
-    background: red;
+    background: green;
 }
+
 .box .face .lip {
     margin: 30px auto;
     width: 80px;
     height: 100px;
     border: solid 5px white;
-    border-color: red transparent transparent;
+    border-color: blue transparent transparent;
     border-radius: 50%/100px 100px 10px 10px;
 }
