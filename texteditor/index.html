@@ -230,7 +230,7 @@
                 element.className = element.className.replace(" selected", "");
         }
 
-        function switchOrderUnOrder(element) {
+        function switchOrderUnOrder(element, status) {
             //Remove selected from all content alignment options.
             var nodes = document.querySelectorAll('[data-attr="order"]');
 
@@ -239,7 +239,7 @@
                 item.className = item.className.trim();
             });
 
-            if (element.className.indexOf("selected") < 0)
+            if (status && element.className.indexOf("selected") < 0)
                 element.className += " selected";
         }
 
@@ -327,12 +327,14 @@
                 if (childNodes[1].className.indexOf("ordered text_indent") != -1)
                     childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
 
-                if (childNodes[1].className.indexOf("unordered") < 0)
+                if (childNodes[1].className.indexOf("unordered") < 0) {
                     childNodes[1].className += " unordered indent";
-                else
+                    switchOrderUnOrder(e.target, true);
+                } else {
                     childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
 
-                switchOrderUnOrder(e.target);
+                    switchOrderUnOrder(e.target);
+                }
 
                 break;
             case "button ordered":
@@ -340,12 +342,15 @@
                 if (childNodes[1].className.indexOf("unordered indent") != -1)
                     childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
 
-                if (childNodes[1].className.indexOf("ordered text_indent") < 0)
+                if (childNodes[1].className.indexOf("ordered text_indent") < 0) {
                     childNodes[1].className += " ordered text_indent";
-                else
+                    switchOrderUnOrder(e.target, true);
+                } else {
                     childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
+                    switchOrderUnOrder(e.target);
+                }
 
-                switchOrderUnOrder(e.target);
+
                 break;
             default:
                 console.log("default");
