@@ -42,28 +42,114 @@ body {
 }*/
 
 .outerframe {
-    width: 400px;
-    height: 400px;
+    position: relative;
+    width: 600px;
+    height: 620px;
+    background: lightskyblue;
+    margin: 0px auto;
 }
 
-.circle {
+.frame {
+    position: relative;
+    padding: 20px 100px 0px;
+    z-index: 2;
+}
+
+.petal {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    border: 1px solid darkorange;
+    /*border: 1px solid black;*/
+    border-width: 1px;
+    border-style: dotted;
+    border-color: black black transparent;
+    background: orange;
     box-shadow: 0 0 50px darkorange;
 }
 
-.circle.large {
+.core.large {
     z-index: 3;
     position: absolute;
-    top: 69px;
-    left: 132px;
+    top: 82px;
+    left: 223px;
     width: 150px;
     height: 150px;
     border-radius: 75px;
     border: 1px solid black;
     background-color: saddlebrown;
+}
+
+.middle {
+    position: relative;
+    border: 1px solid transparent;
+    height: 200px;
+}
+
+.stem {
+    width: 330px;
+    border-radius: 0px 0px 100px 100px;
+    border-style: solid;
+    border-color: yellowgreen;
+    border-width: 7px;
+    border-top: transparent;
+    top: 200px;
+    transform: rotate(-90deg);
+    margin-left: 127px;
+    margin-top: 100px;
+}
+
+.vein {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(to top left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0) calc(50% - 1.8px), #8BC34A 50%, rgba(255, 0, 0, 0) calc(50% + 1.8px), rgba(255, 0, 0, 0) 100%);
+}
+
+.leaf {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: #4CAF50;
+    border-radius: 80px 0px;
+    border: 2px solid #CDDC39;
+}
+
+.vein.left,
+.leaf.left {
+    left: 195px;
+    top: 80px;
+}
+
+.vein.right,
+.leaf.right {
+    left: 300px;
+    top: 8px;
+}
+
+.vein.right {
+    transform: scale(1)
+}
+
+.pot {
+    position: relative;
+    padding: 0px 250px;
+}
+
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: saddlebrown;
+}
+
+.box.left {
+    transform: skew(10deg, 0deg);
+    margin-left: -10px;
+}
+
+.box.right {
+    transform: skew(-10deg, 0deg);
+    margin-left: 10px;
 }
 
 .row1,
