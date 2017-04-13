@@ -162,8 +162,8 @@
     <div class="button bold" data-name="bold"></div>
     <div class="button italic" data-name="italic"></div>
     <div class="button underline" data-name="underline"></div>
-    <div class="button unordered" data-name="unordered"></div>
-    <div class="button ordered" data-name="ordered"></div>
+    <div class="button unordered" data-name="unordered" data-attr="order"></div>
+    <div class="button ordered" data-name="ordered" data-attr="order"></div>
     <div class="editor">
         <span class="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis,
@@ -229,6 +229,20 @@
             else
                 element.className = element.className.replace(" selected", "");
         }
+
+        function switchOrderUnOrder(element) {
+            //Remove selected from all content alignment options.
+            var nodes = document.querySelectorAll('[data-attr="order"]');
+
+            nodes.forEach(function(item) {
+                item.className = item.className.replace("selected", "");
+                item.className = item.className.trim();
+            });
+
+            if (element.className.indexOf("selected") < 0)
+                element.className += " selected";
+        }
+
 
         // Entry point
         var editorItem = document.getElementsByClassName("editor");
@@ -318,6 +332,8 @@
                 else
                     childNodes[1].className = childNodes[1].className.replace("unordered indent", "");
 
+                switchOrderUnOrder(e.target);
+
                 break;
             case "button ordered":
             case "button ordered selected":
@@ -329,6 +345,7 @@
                 else
                     childNodes[1].className = childNodes[1].className.replace("ordered text_indent", "");
 
+                switchOrderUnOrder(e.target);
                 break;
             default:
                 console.log("default");
