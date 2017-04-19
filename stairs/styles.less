@@ -1,0 +1,57 @@
+@black: black;
+@dimgray: dimgray;
+body {
+    background: @black;
+}
+
+.borderNwidth(@value, @style, @color, @size) {
+    border-bottom: @value @style @color;
+    width: @size
+}
+
+.borders(@value, @style, @color1, @color2) {
+    border-bottom: @value @style @color2;
+    border-left: @value @style @color1;
+    border-right: @value @style @color1;
+}
+
+.container {
+    left: 50%;
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step {
+    background: transparent;
+    &.first {
+        .borderNwidth(50px, solid, @dimgray, 250px)
+    }
+    &.second {
+        .borders(25px, solid, @black, #383838);
+    }
+    &.third {
+        .borderNwidth(45px, solid, @dimgray, 200px)
+    }
+    &.fourth {
+        .borders(20px, solid, @black, #2f2f2f);
+    }
+    &.fifth {
+        .borderNwidth(40px, solid, @dimgray, 160px)
+    }
+    &.sixth {
+        .borders(15px, solid, @black, #3c3b3b);
+        p {
+            text-align: right;
+            margin: 0;
+            height: 220px;
+            font-size: 52px;
+            color: #9E9E9E;
+            font-weight: bolder;
+            line-height: 4;
+            padding-right: 5px;
+            box-shadow: 2px -3px 30px #FFC107;
+        }
+    }
+}
