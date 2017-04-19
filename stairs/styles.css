@@ -41,7 +41,7 @@ body {
 .step.sixth .door {
   margin: 0;
   box-shadow: 2px -3px 30px #FFC107;
-  padding: 100px 5px 100px 100px;
+  padding: 100px 10px 100px 95px;
   border-bottom-style: inset;
   border-left-style: inset;
   border-top-style: outset;
