@@ -1,5 +1,6 @@
 @black: black;
 @dimgray: dimgray;
+@gray: gray;
 body {
     background: @black;
 }
@@ -13,6 +14,15 @@ body {
     border-bottom: @value @style @color2;
     border-left: @value @style @color1;
     border-right: @value @style @color1;
+}
+
+.doorborders(@style1, @style2, @size, @color) {
+    border-bottom-style: @style1;
+    border-left-style: @style1;
+    border-top-style: @style2;
+    border-right-style: @style2;
+    border-width: @size;
+    border-color: @color;
 }
 
 .container {
@@ -42,16 +52,17 @@ body {
     }
     &.sixth {
         .borders(15px, solid, @black, #3c3b3b);
-        p {
-            text-align: right;
+        .door {
             margin: 0;
-            height: 220px;
-            font-size: 52px;
-            color: #9E9E9E;
-            font-weight: bolder;
-            line-height: 4;
-            padding-right: 5px;
             box-shadow: 2px -3px 30px #FFC107;
+            padding: 100px 5px 100px 100px;
+            .doorborders(inset, outset, 5px, @gray);
+            .knob {
+                width: 10px;
+                height: 10px;
+                border: 5px outset @gray;
+                border-radius: 10px;
+            }
         }
     }
 }
