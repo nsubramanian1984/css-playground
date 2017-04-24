@@ -1,4 +1,4 @@
-.ThreeToFiveRatio(@height: 90px, @width: 150px) {
+.heightToWidthRatio(@height: 90px, @width: 150px) {
     height: @height;
     width: @width;
 }
@@ -17,14 +17,25 @@
 }
 
 .ivory_coast {
-    .ThreeToFiveRatio;
+    .heightToWidthRatio;
     .margins;
     background: linear-gradient(to right, orange 0%, orange 33.3%, white 33.3%, white 66.6%, lightgreen 66.6%, lightgreen);
 }
 
 .rehoboth {
-    .ThreeToFiveRatio(60px, 100px);
+    .heightToWidthRatio(60px, 100px);
     .margins;
     .borders(25px, solid, black);
     background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
+}
+
+.kuwait {
+    .heightToWidthRatio(45px, 200px);
+    .margins;
+    .borders(80px, solid, black);
+    border-top-width: 50px;
+    border-bottom-width: 50px;
+    border-top-color: green;
+    border-right: transparent;
+    border-bottom-color: #ce1126;
 }

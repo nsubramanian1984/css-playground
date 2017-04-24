@@ -9,6 +9,7 @@ He has kept some restrictions on how the flags were created, e.g. "using only on
 To get started, I am picking the easier ones to reproduce.
 1) Ivory coast
 2) Rehoboth -- This nation no longer exists, but had a simpler pattern for me to try out.
+3) Kuwait -- Will refactor in the coming days.
 
 
 

@@ -18,3 +18,14 @@
   border: 25px solid black;
   background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
 }
+.kuwait {
+  height: 45px;
+  width: 200px;
+  margin: 10px;
+  border: 80px solid black;
+  border-top-width: 50px;
+  border-bottom-width: 50px;
+  border-top-color: green;
+  border-right: transparent;
+  border-bottom-color: #ce1126;
+}
