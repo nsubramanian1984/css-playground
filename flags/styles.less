@@ -1,0 +1,30 @@
+.ThreeToFiveRatio(@height: 90px, @width: 150px) {
+    height: @height;
+    width: @width;
+}
+
+.margins {
+    margin: 10px;
+}
+
+.borders(@width: 25px, @style: solid, @color: white) {
+    border: @width @style @color;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ivory_coast {
+    .ThreeToFiveRatio;
+    .margins;
+    background: linear-gradient(to right, orange 0%, orange 33.3%, white 33.3%, white 66.6%, lightgreen 66.6%, lightgreen);
+}
+
+.rehoboth {
+    .ThreeToFiveRatio(60px, 100px);
+    .margins;
+    .borders(25px, solid, black);
+    background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
+}
