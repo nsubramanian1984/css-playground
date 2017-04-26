@@ -4,28 +4,35 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 1em;
+}
+.flag {
+  text-align: center;
+}
+.flag p {
+  font: 1em bolder sans-serif;
 }
 .ivory_coast {
-  height: 90px;
+  height: 100px;
   width: 150px;
   margin: 10px;
-  background: linear-gradient(to right, orange 0%, orange 33.3%, white 33.3%, white 66.6%, lightgreen 66.6%, lightgreen);
+  background: linear-gradient(to right, #f38d39 0%, #f38d39 33.3%, white 33.3%, white 66.6%, #339d10 66.6%, #339d10);
 }
 .rehoboth {
-  height: 60px;
+  height: 50px;
   width: 100px;
   margin: 10px;
   border: 25px solid black;
   background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
 }
 .kuwait {
-  height: 45px;
-  width: 200px;
+  height: 32.5px;
+  width: 143px;
   margin: 10px;
-  border: 80px solid black;
-  border-top-width: 50px;
-  border-bottom-width: 50px;
-  border-top-color: green;
+  border: 52px solid black;
+  border-top-width: 33px;
+  border-bottom-width: 33px;
+  border-top-color: #007a3d;
   border-right: transparent;
   border-bottom-color: #ce1126;
 }
