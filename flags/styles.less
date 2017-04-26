@@ -3,6 +3,10 @@
     width: @width;
 }
 
+body {
+    background: lightblue;
+}
+
 .margins {
     margin: 10px;
 }
@@ -20,9 +24,7 @@
 .flag {
     text-align: center;
 }
-.flag p {
-    font: 1em bolder sans-serif;
-}
+
 .ivory_coast {
     .heightToWidthRatio(100px, 150px);
     .margins;
@@ -45,4 +47,19 @@
     border-top-color: #007a3d;
     border-right: transparent;
     border-bottom-color: #ce1126;
+}
+
+.czech {
+    .heightToWidthRatio(0px, 100px);
+    .margins;
+    .borders(50px, solid, #11457e);
+    border-bottom: 50px solid red;
+    border-right: 0px solid red;
+    border-top: 50px solid white;
+}
+
+.finland {
+    .heightToWidthRatio(110px, 180px);
+    .margins; // #003580
+    background: linear-gradient(to bottom, transparent 0%, transparent 36%, #003399 36%,#003399 64%, transparent 64%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 28%, #003399 28%, #003399 45%, transparent 45%, transparent 100%), white;
 }
