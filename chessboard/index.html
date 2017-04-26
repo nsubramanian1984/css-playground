@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <link rel="stylesheet " href="styles.css ">
+</head>
+
+<body>
+    <div class="chessboard "></div>
+</body>
+
+<script type="text/javascript ">
+    //queen, king, bishop, knight, rook, pawn
+    let pawns = ['&#9819;', '&#9818;', '&#9815;', '&#9816;', '&#9814;', '&#9817;', '&spades;'];
+
+    function createTile(rank, bgcolor, hide, rival) {
+        let cls = 'tile',
+            spancls = '';
+
+        if (bgcolor !== undefined && bgcolor === 'alternate') {
+            cls = 'tile alternate';
+        }
+
+        if (hide !== undefined)
+            spancls = 'hide';
+
+        if (rival !== undefined)
+            spancls = 'rival';
+
+        let content = `<div class="${cls} "><span class="${spancls} ">${pawns[rank]}</span></div>`;
+
+        return content;
+
+    }
+
+    function createRow(rowid) {
+        let content = '';
+        let ranksForRow0 = [4, 3, 2, 0, 1, 2, 3, 4],
+            ranksForRow7 = [4, 3, 2, 1, 0, 2, 3, 4],
+            repeatFunc = (x, times) => {
+                let arr = [];
+                for (let i = 0; i < times; i++)
+                    arr.push(x);
+                return arr;
+            },
+            ranksForRow1_6 = repeatFunc(5, 8),
+            ranksForRow2_5 = repeatFunc(6, 8);
+
+        for (let i = 0; i < 8; i++) {
+            if (rowid === 0) {
+                if (i % 2 === 0)
+                    content += createTile(ranksForRow0[i], 'normal');
+                else
+                    content += createTile(ranksForRow0[i], 'alternate');
+            } else if (rowid === 1) {
+                if (i % 2 === 0)
+                    content += createTile(ranksForRow1_6[i], 'alternate');
+                else
+                    content += createTile(ranksForRow1_6[i], 'normal');
+            } else if (rowid >= 2 && rowid <= 5) {
+                if (rowid % 2 === 0) {
+                    if (i % 2 !== 0)
+                        content += createTile(ranksForRow2_5[i], 'alternate', 'hide');
+                    else
+                        content += createTile(ranksForRow2_5[i], 'normal', 'hide');
+                } else {
+                    if (i % 2 === 0)
+                        content += createTile(ranksForRow2_5[i], 'alternate', 'hide');
+                    else
+                        content += createTile(ranksForRow2_5[i], 'normal', 'hide');
+                }
+            } else if (rowid === 6) {
+                if (i % 2 === 0)
+                    content += createTile(ranksForRow1_6[i], 'normal', '', 'rival');
+                else
+                    content += createTile(ranksForRow1_6[i], 'alternate', '', 'rival');
+            } else if (rowid === 7) {
+                if (i % 2 === 0)
+                    content += createTile(ranksForRow7[i], 'alternate', '', 'rival');
+                else
+                    content += createTile(ranksForRow7[i], 'normal', '', 'rival');
+            }
+        }
+
+        return content;
+
+    }
+
+    function createChessBoard() {
+
+        var chessboard = document.getElementsByClassName("chessboard ");
+        console.log(chessboard);
+
+        if (chessboard && chessboard[0]) {
+            var handle = chessboard[0];
+            let content = '';
+            for (let i = 0; i < 8; i++) {
+                //wrap with div
+                content += '<div class="row ">';
+                content += createRow(i);
+                content += '</div>';
+            }
+
+            handle.innerHTML = content;
+        }
+    }
+
+    createChessBoard();
+</script>
+
+</html>

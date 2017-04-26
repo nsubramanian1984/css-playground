@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.chessboard {
+    width: 800px;
+    height: auto;
+    border: 10px solid black;
+    margin: 1em auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tile {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: dimgray;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.tile.alternate {
+    background: saddlebrown;
+}
+
+.tile span {
+    font-size: 4em;
+    line-height: 100px;
+    color: wheat;
+}
+
+.tile span.rival {
+    color: black;
+}
+
+.tile span.hide,
+.tile.alternate span.hide {
+    display: none;
+}

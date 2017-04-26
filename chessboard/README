@@ -1,0 +1,10 @@
+A simple chessboard created using HTML, CSS and some JavaScript.
+This was created to try out unicode and display flex features.
+
+I used Chrome for testing, and did not add vendor-specific prefixes for css.
+
+Note: I have no intention to add game features to the chessboard.
+
+To Do:
+1) Refactor JavaScript (DRY principle).
+
