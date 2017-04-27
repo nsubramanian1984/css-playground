@@ -1,69 +1,80 @@
 body {
-  background: lightblue;
+    background: lightblue;
 }
+
 .margins {
-  margin: 10px;
+    margin: 10px;
 }
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
 }
+
 .flag {
-  text-align: center;
-  background: lightskyblue;
-  margin: 1em;
+    text-align: center;
+    background: lightskyblue;
+    margin: 1em;
 }
+
 .ivory_coast {
-  height: 100px;
-  width: 150px;
-  margin: 10px;
-  background: linear-gradient(to right, #f38d39 0%, #f38d39 33.3%, white 33.3%, white 66.6%, #339d10 66.6%, #339d10);
+    height: 100px;
+    width: 150px;
+    margin: 10px;
+    background: linear-gradient(to right, #f38d39 0%, #f38d39 33.3%, white 33.3%, white 66.6%, #339d10 66.6%, #339d10);
 }
+
 .rehoboth {
-  height: 50px;
-  width: 100px;
-  margin: 10px;
-  border: 25px solid black;
-  background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border: 25px solid black;
+    background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
 }
+
 .kuwait {
-  height: 32.5px;
-  width: 143px;
-  margin: 10px;
-  border: 52px solid black;
-  border-top-width: 33px;
-  border-bottom-width: 33px;
-  border-top-color: #007a3d;
-  border-right: transparent;
-  border-bottom-color: #ce1126;
-  background: white;
+    height: 32.5px;
+    width: 143px;
+    margin: 10px;
+    border: 52px solid black;
+    border-top-width: 33px;
+    border-bottom-width: 33px;
+    border-top-color: #007a3d;
+    border-right: transparent;
+    border-bottom-color: #ce1126;
+    background: white;
 }
+
 .czech {
-  height: 0px;
-  width: 100px;
-  margin: 10px;
-  border: 50px solid #11457e;
-  border-bottom: 50px solid red;
-  border-right: 0px solid red;
-  border-top: 50px solid white;
+    height: 0px;
+    width: 100px;
+    margin: 10px;
+    border: 50px solid #11457e;
+    border-bottom: 50px solid red;
+    border-right: 0px solid red;
+    border-top: 50px solid white;
 }
+
 .finland {
-  height: 110px;
-  width: 180px;
-  margin: 10px;
-  background: linear-gradient(to bottom, transparent 0%, transparent 36%, #003399 36%, #003399 64%, transparent 64%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 28%, #003399 28%, #003399 45%, transparent 45%, transparent 100%), white;
+    height: 110px;
+    width: 180px;
+    margin: 10px;
+    background: linear-gradient(to bottom, transparent 0%, transparent 36%, #003399 36%, #003399 64%, transparent 64%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 28%, #003399 28%, #003399 45%, transparent 45%, transparent 100%), white;
 }
+
 .namibia {
-  height: 100px;
-  width: 150px;
-  margin: 10px;
-  background: linear-gradient(148deg, #000099 0%, #000099 39%, white 39%, white 42%, red 42%, red 58%, white 58%, white 61%, green 61%, green 100%);
+    height: 100px;
+    width: 150px;
+    margin: 10px;
+    background: linear-gradient(148deg, #000099 0%, #000099 39%, white 39%, white 42%, red 42%, red 58%, white 58%, white 61%, green 61%, green 100%);
 }
+
 .namibia::before {
-  content: "☀";
-  color: yellow;
-  font-size: 2em;
-  position: relative;
-  left: -45px;
+    content: "\2600";
+    color: #ffce00;
+    background: #000099;
+    font-size: 2em;
+    position: relative;
+    left: -45px;
 }

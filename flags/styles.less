@@ -70,13 +70,12 @@ body {
 .namibia {
     .heightToWidthRatio(100px, 150px);
     .margins; // #003580
-    background: linear-gradient(148deg, #000099 0%, #000099 39%, white 39%, white 42%, red 42%, red 58%, white 58%, white 61%, green 61%, green 100%)
-}
-
-.namibia::before {
-    content: "☀";
-    color: yellow;
-    font-size: 2em;
-    position: relative;
-    left: -45px;
+    background: linear-gradient(148deg, #000099 0%, #000099 39%, white 39%, white 42%, red 42%, red 58%, white 58%, white 61%, green 61%, green 100%);
+    &::before {
+        content: "\2600";
+        color: yellow;
+        font-size: 2em;
+        position: relative;
+        left: -45px;
+    }
 }
