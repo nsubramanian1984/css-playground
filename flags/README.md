@@ -1,4 +1,4 @@
-Today, I was looking around in web for inspiration whether anybody has recreated world nation's flags using css.
+Today, I was looking around on web for inspiration whether anybody has recreated world nation's flags using css.
 
 I found Tim Carry's awesome work at https://pixelastic.github.io/css-flags/.
 
