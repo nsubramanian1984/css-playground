@@ -72,3 +72,44 @@ body {
   margin: 10px;
   background: linear-gradient(to bottom, transparent 44%, #d3212a 44%, #d3212a 55%, transparent 55%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 32%, #d3212a 32%, #d3212a 40%, transparent 40%, transparent 100%), linear-gradient(to right, transparent 28%, white 28%, white 44%, transparent 44%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 39%, white 39%, white 61%, transparent 61%, transparent 100%), #00338d;
 }
+.indonesia {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, transparent 50%, transparent 100%), white;
+}
+.netherlands {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 33.3%, transparent 33.3%, transparent 66.6%, #0039a7 66.6%, #0039a7 100%), white;
+}
+.norway {
+  height: 100px;
+  width: 138px;
+  margin: 10px;
+  background: linear-gradient(to right, transparent 0%, transparent 32%, #002469 32%, #002469 41%, transparent 41%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 43.75%, #002469 43.75%, #002469 56.25%, transparent 56.25%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 27.2%, white 27.2%, white 45.45%, transparent 45.45%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 37.5%, white 37.5%, white 62.5%, transparent 62.5%, transparent 100%), #f42938;
+}
+.nigeria {
+  height: 75px;
+  width: 150px;
+  margin: 10px;
+  background: linear-gradient(to right, transparent 0%, transparent 33.3%, white 33.3%, white 66.6%, transparent 66.6%, transparent 100%), #008443;
+}
+.bahamas {
+  position: relative;
+  height: 75px;
+  width: 150px;
+  margin: 10px;
+  background: linear-gradient(to bottom, #007a94 0%, #007a94 33.3%, #ffc92f 33.3%, #ffc92f 66.6%, #007a94 66.6%, #007a94 100%);
+}
+.bahamas::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 64.95px;
+  height: 75px;
+  background: black;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
