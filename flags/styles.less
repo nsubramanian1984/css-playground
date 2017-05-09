@@ -98,22 +98,22 @@ body {
 }
 
 .norway {
-    .heightToWidthRatio(100px,138px);
+    .heightToWidthRatio(100px, 138px);
     .margins;
-    background: linear-gradient(to right, transparent 0%,transparent 32%, #002469 32%, #002469 41%, transparent 41%, transparent 100%),linear-gradient(to bottom, transparent 0%, transparent 43.75%,#002469 43.75%, #002469 56.25%, transparent 56.25%, transparent 100%),linear-gradient(to right, transparent 0%, transparent 27.2%, white 27.2%, white 45.45%, transparent 45.45%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 37.5%, white 37.5%, white 62.5%, transparent 62.5%, transparent 100%), #f42938;
+    background: linear-gradient(to right, transparent 0%, transparent 32%, #002469 32%, #002469 41%, transparent 41%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 43.75%, #002469 43.75%, #002469 56.25%, transparent 56.25%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 27.2%, white 27.2%, white 45.45%, transparent 45.45%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 37.5%, white 37.5%, white 62.5%, transparent 62.5%, transparent 100%), #f42938;
 }
 
 .nigeria {
-    .heightToWidthRatio(75px,150px);
+    .heightToWidthRatio(75px, 150px);
     .margins;
     background: linear-gradient(to right, transparent 0%, transparent 33.3%, white 33.3%, white 66.6%, transparent 66.6%, transparent 100%), #008443;
 }
 
 .bahamas {
     position: relative;
-    .heightToWidthRatio(75px,150px);
+    .heightToWidthRatio(75px, 150px);
     .margins;
-    background: linear-gradient(to bottom,#007a94 0%, #007a94 33.3%,#ffc92f 33.3%, #ffc92f 66.6%, #007a94 66.6%, #007a94 100% );
+    background: linear-gradient(to bottom, #007a94 0%, #007a94 33.3%, #ffc92f 33.3%, #ffc92f 66.6%, #007a94 66.6%, #007a94 100%);
     &::before {
         content: "";
         position: absolute;
@@ -123,5 +123,50 @@ body {
         height: 75px;
         background: black;
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    }
+}
+
+.benin {
+    position: relative;
+    .heightToWidthRatio(100px, 150px);
+    .margins;
+    background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, #fddc42 50%, #fddc42 100%);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 60px;
+        height: 100px;
+        background: #00ae42;
+    }
+}
+
+.wallis_futuna {
+    position: relative;
+    .heightToWidthRatio(120px, 180px);
+    .margins;
+    background: #d81c3f;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left:0px;
+        height: 40px;
+        width: 60px;
+        background: linear-gradient(to right, #00325a 33.3%, white 33.3%, white 66.6%, #d81c3f 66.6%);
+        border: 1px solid white;
+        border-left: transparent;
+        border-top: transparent;
+    };
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%),white;
+        left: 100px;
+        top: 40px;
     }
 }
