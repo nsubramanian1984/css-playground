@@ -198,3 +198,46 @@ body {
   stroke: #e60d2e;
   fill: #e60d2e;
 }
+.greece {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+  position: relative;
+  background: repeating-linear-gradient(to bottom, #0039a7 0%, #0039a7 11.11%, white 11.11%, white 22.22%);
+}
+.greece::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 55.55px;
+  height: 55.5px;
+  background: linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%), #0039a7;
+}
+.guyana {
+  height: 150px;
+  width: 250px;
+  margin: 10px;
+  position: relative;
+  background: #00ae42;
+}
+.guyana::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(343deg, white 0%, white 36%, transparent 36%), linear-gradient(197deg, white 0%, white 36%, transparent 36%), #ffd900;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 150px;
+  clip-path: polygon(0% 0%, 100% 50%, 0 100%);
+}
+.guyana::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(330deg, black 0%, black 36%, transparent 36%), linear-gradient(210deg, black 0%, black 36%, transparent 36%), #cc0c2f;
+  top: 0px;
+  left: 0px;
+  width: 130px;
+  height: 150px;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
