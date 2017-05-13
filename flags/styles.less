@@ -80,44 +80,38 @@ body {
 }
 
 .iceland {
-    .heightToWidthRatio(100px,
-    127px);
+    .heightToWidthRatio(100px, 127px);
     .margins;
     background: linear-gradient(to bottom, transparent 44%, #d3212a 44%, #d3212a 55%, transparent 55%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 32%, #d3212a 32%, #d3212a 40%, transparent 40%, transparent 100%), linear-gradient(to right, transparent 28%, white 28%, white 44%, transparent 44%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 39%, white 39%, white 61%, transparent 61%, transparent 100%), #00338d;
 }
 
 .indonesia {
-    .heightToWidthRatio(100px,
-    150px);
+    .heightToWidthRatio(100px, 150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, transparent 50%, transparent 100%), white;
 }
 
 .netherlands {
-    .heightToWidthRatio(100px,
-    150px);
+    .heightToWidthRatio(100px, 150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 33.3%, transparent 33.3%, transparent 66.6%, #0039a7 66.6%, #0039a7 100%), white;
 }
 
 .norway {
-    .heightToWidthRatio(100px,
-    138px);
+    .heightToWidthRatio(100px, 138px);
     .margins;
     background: linear-gradient(to right, transparent 0%, transparent 32%, #002469 32%, #002469 41%, transparent 41%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 43.75%, #002469 43.75%, #002469 56.25%, transparent 56.25%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 27.2%, white 27.2%, white 45.45%, transparent 45.45%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 37.5%, white 37.5%, white 62.5%, transparent 62.5%, transparent 100%), #f42938;
 }
 
 .nigeria {
-    .heightToWidthRatio(75px,
-    150px);
+    .heightToWidthRatio(75px, 150px);
     .margins;
     background: linear-gradient(to right, transparent 0%, transparent 33.3%, white 33.3%, white 66.6%, transparent 66.6%, transparent 100%), #008443;
 }
 
 .bahamas {
     position: relative;
-    .heightToWidthRatio(75px,
-    150px);
+    .heightToWidthRatio(75px, 150px);
     .margins;
     background: linear-gradient(to bottom, #007a94 0%, #007a94 33.3%, #ffc92f 33.3%, #ffc92f 66.6%, #007a94 66.6%, #007a94 100%);
     &::before {
@@ -134,8 +128,7 @@ body {
 
 .benin {
     position: relative;
-    .heightToWidthRatio(100px,
-    150px);
+    .heightToWidthRatio(100px, 150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, #fddc42 50%, #fddc42 100%);
     &::before {
@@ -151,8 +144,7 @@ body {
 
 .wallis_futuna {
     position: relative;
-    .heightToWidthRatio(120px,
-    180px);
+    .heightToWidthRatio(120px, 180px);
     .margins;
     background: #d81c3f;
     &::before {
@@ -181,8 +173,7 @@ body {
 
 .qatar {
     position: relative;
-    .heightToWidthRatio(100px,
-    255px);
+    .heightToWidthRatio(100px, 255px);
     .margins;
     background: #911c3c;
     &::before {
@@ -199,8 +190,7 @@ body {
 
 .western_sahara {
     position: relative;
-    .heightToWidthRatio(252px,
-    504px);
+    .heightToWidthRatio(126px, 252px);
     .margins;
     background: linear-gradient(to bottom, black 0%, black 33.3%, white 33.3%, white 66.6%, #007836 66.6%, #007836 100%);
     &::before {
@@ -208,24 +198,26 @@ body {
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 168px;
-        height: 252px;
+        width: 84px;
+        height: 126px;
         background: #e60d2e;
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     }
     ;
     &::after {
+        content: url("star.svg");
         position: absolute;
-        top: 126px;
-        left: 252px;
+        top: -190px;
+        left: -120px;
         stroke: #e60d2e;
         fill: #e60d2e;
+        background: transparent;
+        transform: scale(0.12);
     }
 }
 
 .greece {
-    .heightToWidthRatio(100px,
-    150px);
+    .heightToWidthRatio(100px, 150px);
     .margins;
     position: relative;
     background: repeating-linear-gradient(to bottom, #0039a7 0%, #0039a7 11.11%, white 11.11%, white 22.22%);
@@ -241,8 +233,7 @@ body {
 }
 
 .guyana {
-    .heightToWidthRatio(150px,
-    250px);
+    .heightToWidthRatio(150px, 250px);
     .margins;
     position: relative;
     background: #00ae42;
@@ -254,13 +245,13 @@ body {
         left: 0px;
         width: 250px;
         height: 150px;
-         clip-path: polygon(0% 0%, 100% 50%, 0 100%);
+        clip-path: polygon(0% 0%, 100% 50%, 0 100%);
     }
     ;
     &::after {
         position: absolute;
         content: "";
-        background: linear-gradient(330deg,black 0%, black 36%, transparent 36%),linear-gradient(210deg,black 0%, black 36%, transparent 36%), #cc0c2f;
+        background: linear-gradient(330deg, black 0%, black 36%, transparent 36%), linear-gradient(210deg, black 0%, black 36%, transparent 36%), #cc0c2f;
         top: 0px;
         left: 0px;
         width: 130px;

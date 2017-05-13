@@ -176,8 +176,8 @@ body {
 }
 .western_sahara {
   position: relative;
-  height: 252px;
-  width: 504px;
+  height: 126px;
+  width: 252px;
   margin: 10px;
   background: linear-gradient(to bottom, black 0%, black 33.3%, white 33.3%, white 66.6%, #007836 66.6%, #007836 100%);
 }
@@ -186,17 +186,20 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 168px;
-  height: 252px;
+  width: 84px;
+  height: 126px;
   background: #e60d2e;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 .western_sahara::after {
+  content: url("star.svg");
   position: absolute;
-  top: 126px;
-  left: 252px;
+  top: -190px;
+  left: -120px;
   stroke: #e60d2e;
   fill: #e60d2e;
+  background: transparent;
+  transform: scale(0.12);
 }
 .greece {
   height: 100px;
