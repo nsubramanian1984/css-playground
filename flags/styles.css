@@ -244,3 +244,63 @@ body {
   height: 150px;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
+.greenland {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+  background: linear-gradient(to bottom, white 50%, #e80033 50%, #e80033 100%);
+  position: relative;
+}
+.greenland::before {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 25px;
+  height: 66px;
+  width: 66px;
+  border-radius: 33px;
+  background: linear-gradient(to bottom, #e80033 50%, white 50%, white 100%);
+}
+.palau {
+  height: 100px;
+  width: 160px;
+  margin: 10px;
+  position: relative;
+  background: #4891dc;
+}
+.palau::before {
+  content: "";
+  position: absolute;
+  background: #f7ec5b;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  top: 20px;
+  left: 40px;
+}
+.palmyra_atoll {
+  height: 100px;
+  width: 160px;
+  margin: 10px;
+  position: relative;
+  background: linear-gradient(to bottom, #cc0c2f 50%, #0046ae 50%, #0046ae 83.5%, #ffd600 83.5%);
+}
+.palmyra_atoll::before {
+  content: "";
+  position: absolute;
+  background: #ffd600;
+  height: 75px;
+  width: 75px;
+  border-radius: 37.5px;
+  top: 4px;
+  left: 37.5px;
+}
+.palmyra_atoll::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 160px;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(to bottom, transparent 50%, #0046ae 50%, #0046ae 83.5%, #ffd600 83.5%);
+}
