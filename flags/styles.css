@@ -301,3 +301,30 @@ body {
   left: 0px;
   background: linear-gradient(to bottom, transparent 50%, #0046ae 50%, #0046ae 83.5%, #ffd600 83.5%);
 }
+.burundi {
+  height: 150px;
+  width: 250px;
+  margin: 10px;
+  background: linear-gradient(30deg, transparent 115px, white 115px, white 140px, transparent 140px), linear-gradient(150deg, #cc0c2f 0px, #cc0c2f 115px, white 115px, white 140px, #cc0c2f 140px);
+  position: relative;
+}
+.burundi::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  width: 250px;
+  clip-path: polygon(0% 10%, 40% 50%, 60% 50%, 100% 10%, 100% 90%, 60% 50%, 40% 50%, 0% 90%);
+  background: #2db135;
+}
+.burundi::after {
+  content: "";
+  position: absolute;
+  height: 85px;
+  width: 85px;
+  top: 32.5px;
+  left: 82.5px;
+  border-radius: 42.5px;
+  background: white;
+}
