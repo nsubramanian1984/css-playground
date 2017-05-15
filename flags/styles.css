@@ -1,9 +1,6 @@
 body {
   background: lightblue;
 }
-.margins {
-  margin: 10px;
-}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -105,11 +102,11 @@ body {
 }
 .bahamas::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   top: 0px;
   left: 0px;
-  width: 64.95px;
   height: 75px;
+  width: 64.95px;
   background: black;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
@@ -122,11 +119,11 @@ body {
 }
 .benin::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   top: 0px;
   left: 0px;
-  width: 60px;
   height: 100px;
+  width: 60px;
   background: #00ae42;
 }
 .wallis_futuna {
@@ -138,7 +135,7 @@ body {
 }
 .wallis_futuna::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   top: 0px;
   left: 0px;
   height: 40px;
@@ -151,11 +148,11 @@ body {
 .wallis_futuna::after {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
   background: linear-gradient(135deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%), white;
-  left: 100px;
   top: 40px;
+  left: 100px;
+  height: 40px;
+  width: 40px;
 }
 .qatar {
   position: relative;
@@ -170,8 +167,8 @@ body {
   top: 0px;
   left: 0px;
   background: white;
-  width: 102px;
   height: 100px;
+  width: 102px;
   clip-path: polygon(0% 0%, 80% 0%, 100% 5.555%, 80% 11%, 100% 16.5%, 80% 22%, 100% 27.5%, 80% 33%, 100% 38.5%, 80% 44%, 100% 49.6%, 80% 55.2%, 100% 61%, 80% 66.8%, 100% 72.5%, 80% 78%, 100% 82.5%, 80% 89%, 100% 94.5%, 80% 100%, 0% 100%);
 }
 .western_sahara {
@@ -183,17 +180,17 @@ body {
 }
 .western_sahara::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   top: 0px;
   left: 0px;
-  width: 84px;
   height: 126px;
+  width: 84px;
   background: #e60d2e;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 .western_sahara::after {
   content: url("star.svg");
-  position: absolute;
+  position: "absolute";
   top: -190px;
   left: -120px;
   stroke: #e60d2e;
@@ -210,11 +207,11 @@ body {
 }
 .greece::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   top: 0px;
   left: 0px;
-  width: 55.55px;
   height: 55.5px;
+  width: 55.55px;
   background: linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%), #0039a7;
 }
 .guyana {
@@ -225,23 +222,23 @@ body {
   background: #00ae42;
 }
 .guyana::before {
-  position: absolute;
   content: "";
+  position: "absolute";
   background: linear-gradient(343deg, white 0%, white 36%, transparent 36%), linear-gradient(197deg, white 0%, white 36%, transparent 36%), #ffd900;
   top: 0px;
   left: 0px;
-  width: 250px;
   height: 150px;
+  width: 250px;
   clip-path: polygon(0% 0%, 100% 50%, 0 100%);
 }
 .guyana::after {
-  position: absolute;
   content: "";
+  position: "absolute";
   background: linear-gradient(330deg, black 0%, black 36%, transparent 36%), linear-gradient(210deg, black 0%, black 36%, transparent 36%), #cc0c2f;
   top: 0px;
   left: 0px;
-  width: 130px;
   height: 150px;
+  width: 130px;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 .greenland {
@@ -252,8 +249,8 @@ body {
   position: relative;
 }
 .greenland::before {
-  position: absolute;
   content: "";
+  position: "absolute";
   top: 17px;
   left: 25px;
   height: 66px;
@@ -270,7 +267,7 @@ body {
 }
 .palau::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   background: #f7ec5b;
   height: 60px;
   width: 60px;
@@ -287,7 +284,7 @@ body {
 }
 .palmyra_atoll::before {
   content: "";
-  position: absolute;
+  position: "absolute";
   background: #ffd600;
   height: 75px;
   width: 75px;
@@ -297,7 +294,7 @@ body {
 }
 .palmyra_atoll::after {
   content: "";
-  position: absolute;
+  position: "absolute";
   height: 100px;
   width: 160px;
   top: 0px;

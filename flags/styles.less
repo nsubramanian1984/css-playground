@@ -1,18 +1,28 @@
-.heightToWidthRatio(@height: 90px, @width: 150px) {
+.heightWidth(@height: 90px, @width: 150px) {
     height: @height;
     width: @width;
 }
 
-body {
-    background: lightblue;
-}
-
-.margins {
-    margin: 10px;
-}
-
 .borders(@width: 25px, @style: solid, @color: white) {
     border: @width @style @color;
+}
+
+.margins(@value: 10px) {
+    margin: @value;
+}
+
+.topLeft(@top: 0px, @left: 0px) {
+    top: @top;
+    left: @left;
+}
+
+.content_position(@fillWith: "", @position: "absolute") {
+    content: @fillWith;
+    position: @position;
+}
+
+body {
+    background: lightblue;
 }
 
 .container {
@@ -28,20 +38,20 @@ body {
 }
 
 .ivory_coast {
-    .heightToWidthRatio(100px, 150px);
+    .heightWidth(100px, 150px);
     .margins;
     background: linear-gradient(to right, #f38d39 0%, #f38d39 33.3%, white 33.3%, white 66.6%, #339d10 66.6%, #339d10);
 }
 
 .rehoboth {
-    .heightToWidthRatio(50px, 100px);
+    .heightWidth(50px, 100px);
     .margins;
     .borders(25px, solid, black);
     background: linear-gradient(to bottom, red 0%, red, 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to right, red 0%, red 20%, white 20%, white 80%, red 80%, red);
 }
 
 .kuwait {
-    .heightToWidthRatio(32.5px, 143px);
+    .heightWidth(32.5px, 143px);
     .margins;
     .borders(52px, solid, black);
     border-top-width: 33px;
@@ -53,7 +63,7 @@ body {
 }
 
 .czech {
-    .heightToWidthRatio(0px, 100px);
+    .heightWidth(0px, 100px);
     .margins;
     .borders(50px, solid, #11457e);
     border-bottom: 50px solid red;
@@ -62,53 +72,53 @@ body {
 }
 
 .finland {
-    .heightToWidthRatio(110px, 180px);
+    .heightWidth(110px, 180px);
     .margins; // #003580
     background: linear-gradient(to bottom, transparent 0%, transparent 36%, #003399 36%, #003399 64%, transparent 64%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 28%, #003399 28%, #003399 45%, transparent 45%, transparent 100%), white;
 }
 
 .namibia {
-    .heightToWidthRatio(100px, 150px);
+    .heightWidth(100px, 150px);
     .margins; // #003580
     background: linear-gradient(148deg, #000099 0%, #000099 39%, white 39%, white 42%, red 42%, red 58%, white 58%, white 61%, green 61%, green 100%);
     &::before {
         content: url("namibianFlagSymbol.svg");
         position: relative;
-        top: 10px;
-        left: 15px;
+        .topLeft(10px,
+        15px);
     }
 }
 
 .iceland {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     127px);
     .margins;
     background: linear-gradient(to bottom, transparent 44%, #d3212a 44%, #d3212a 55%, transparent 55%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 32%, #d3212a 32%, #d3212a 40%, transparent 40%, transparent 100%), linear-gradient(to right, transparent 28%, white 28%, white 44%, transparent 44%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 39%, white 39%, white 61%, transparent 61%, transparent 100%), #00338d;
 }
 
 .indonesia {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, transparent 50%, transparent 100%), white;
 }
 
 .netherlands {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 33.3%, transparent 33.3%, transparent 66.6%, #0039a7 66.6%, #0039a7 100%), white;
 }
 
 .norway {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     138px);
     .margins;
     background: linear-gradient(to right, transparent 0%, transparent 32%, #002469 32%, #002469 41%, transparent 41%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 43.75%, #002469 43.75%, #002469 56.25%, transparent 56.25%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 27.2%, white 27.2%, white 45.45%, transparent 45.45%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 37.5%, white 37.5%, white 62.5%, transparent 62.5%, transparent 100%), #f42938;
 }
 
 .nigeria {
-    .heightToWidthRatio(75px,
+    .heightWidth(75px,
     150px);
     .margins;
     background: linear-gradient(to right, transparent 0%, transparent 33.3%, white 33.3%, white 66.6%, transparent 66.6%, transparent 100%), #008443;
@@ -116,17 +126,15 @@ body {
 
 .bahamas {
     position: relative;
-    .heightToWidthRatio(75px,
+    .heightWidth(75px,
     150px);
     .margins;
     background: linear-gradient(to bottom, #007a94 0%, #007a94 33.3%, #ffc92f 33.3%, #ffc92f 66.6%, #007a94 66.6%, #007a94 100%);
     &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 64.95px;
-        height: 75px;
+        .content_position;
+        .topLeft;
+        .heightWidth(75px,
+        64.95px);
         background: black;
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     }
@@ -134,36 +142,34 @@ body {
 
 .benin {
     position: relative;
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     150px);
     .margins;
     background: linear-gradient(to bottom, #cc0c2f 0%, #cc0c2f 50%, #fddc42 50%, #fddc42 100%);
     &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 60px;
-        height: 100px;
+        .content_position;
+        .topLeft;
+        .heightWidth(100px,
+        60px);
         background: #00ae42;
     }
 }
 
 .wallis_futuna {
     position: relative;
-    .heightToWidthRatio(120px,
+    .heightWidth(120px,
     180px);
     .margins;
     background: #d81c3f;
     &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 40px;
-        width: 60px;
+        .content_position;
+        .topLeft;
+        .heightWidth(40px,
+        60px);
         background: linear-gradient(to right, #00325a 33.3%, white 33.3%, white 66.6%, #d81c3f 66.6%);
-        border: 1px solid white;
+        .borders(1px,
+        solid,
+        white);
         border-left: transparent;
         border-top: transparent;
     }
@@ -171,54 +177,50 @@ body {
     &::after {
         content: "";
         position: absolute;
-        width: 40px;
-        height: 40px;
         background: linear-gradient(135deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 42.4%, #d81c3f 42.4%, #d81c3f 57.7%, transparent 57.6%, transparent 100%), white;
-        left: 100px;
-        top: 40px;
+        .topLeft(40px,
+        100px);
+        .heightWidth(40px,
+        40px);
     }
 }
 
 .qatar {
     position: relative;
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     255px);
     .margins;
     background: #911c3c;
     &::before {
         content: "";
         position: absolute;
-        top: 0px;
-        left: 0px;
+        .topLeft;
         background: white;
-        width: 102px;
-        height: 100px;
+        .heightWidth(100px,
+        102px);
         clip-path: polygon(0% 0%, 80% 0%, 100% 5.555%, 80% 11%, 100% 16.5%, 80% 22%, 100% 27.5%, 80% 33%, 100% 38.5%, 80% 44%, 100% 49.6%, 80% 55.2%, 100% 61%, 80% 66.8%, 100% 72.5%, 80% 78%, 100% 82.5%, 80% 89%, 100% 94.5%, 80% 100%, 0% 100%);
     }
 }
 
 .western_sahara {
     position: relative;
-    .heightToWidthRatio(126px,
+    .heightWidth(126px,
     252px);
     .margins;
     background: linear-gradient(to bottom, black 0%, black 33.3%, white 33.3%, white 66.6%, #007836 66.6%, #007836 100%);
     &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 84px;
-        height: 126px;
+        .content_position;
+        .topLeft;
+        .heightWidth(126px,
+        84px);
         background: #e60d2e;
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     }
     ;
     &::after {
-        content: url("star.svg");
-        position: absolute;
-        top: -190px;
-        left: -120px;
+        .content_position(url("star.svg"));
+        .topLeft(-190px,
+        -120px);
         stroke: #e60d2e;
         fill: #e60d2e;
         background: transparent;
@@ -227,110 +229,99 @@ body {
 }
 
 .greece {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     150px);
     .margins;
     position: relative;
     background: repeating-linear-gradient(to bottom, #0039a7 0%, #0039a7 11.11%, white 11.11%, white 22.22%);
     &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 55.55px;
-        height: 55.5px;
+        .content_position;
+        .topLeft;
+        .heightWidth(55.5px,
+        55.55px);
         background: linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%), #0039a7;
     }
 }
 
 .guyana {
-    .heightToWidthRatio(150px,
+    .heightWidth(150px,
     250px);
     .margins;
     position: relative;
     background: #00ae42;
     &::before {
-        position: absolute;
-        content: "";
+        .content_position;
         background: linear-gradient(343deg, white 0%, white 36%, transparent 36%), linear-gradient(197deg, white 0%, white 36%, transparent 36%), #ffd900;
-        top: 0px;
-        left: 0px;
-        width: 250px;
-        height: 150px;
+        .topLeft;
+        .heightWidth(150px,
+        250px);
         clip-path: polygon(0% 0%, 100% 50%, 0 100%);
     }
     ;
     &::after {
-        position: absolute;
-        content: "";
+        .content_position;
         background: linear-gradient(330deg, black 0%, black 36%, transparent 36%), linear-gradient(210deg, black 0%, black 36%, transparent 36%), #cc0c2f;
-        top: 0px;
-        left: 0px;
-        width: 130px;
-        height: 150px;
+        .topLeft;
+        .heightWidth( 150px,
+        130px);
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     }
 }
 
 .greenland {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     150px);
     .margins;
     background: linear-gradient(to bottom, white 50%, #e80033 50%, #e80033 100%);
     position: relative;
     &::before {
-        position: absolute;
-        content: "";
-        top: 17px;
-        left: 25px;
-        height: 66px;
-        width: 66px;
+        .content_position;
+        .topLeft(17px,
+        25px);
+        .heightWidth(66px,
+        66px);
         border-radius: 33px;
         background: linear-gradient(to bottom, #e80033 50%, white 50%, white 100%);
     }
 }
 
 .palau {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     160px);
     .margins;
     position: relative;
     background: #4891dc;
     &::before {
-        content: "";
-        position: absolute;
+        .content_position;
         background: #f7ec5b;
-        height: 60px;
-        width: 60px;
+        .heightWidth( 60px,
+        60px);
         border-radius: 30px;
-        top: 20px;
-        left: 40px;
+        .topLeft(20px,
+        40px);
     }
 }
 
 .palmyra_atoll {
-    .heightToWidthRatio(100px,
+    .heightWidth(100px,
     160px);
     .margins;
     position: relative;
     background: linear-gradient(to bottom, #cc0c2f 50%, #0046ae 50%, #0046ae 83.5%, #ffd600 83.5%);
     &::before {
-        content: "";
-        position: absolute;
+        .content_position;
         background: #ffd600;
-        height: 75px;
-        width: 75px;
+        .heightWidth(75px,
+        75px);
         border-radius: 37.5px;
-        top: 4px;
-        left: 37.5px;
+        .topLeft(4px,
+        37.5px);
     }
     &::after {
-        content: "";
-        position: absolute;
-        .heightToWidthRatio(100px,
+        .content_position;
+        .heightWidth(100px,
         160px);
-        top: 0px;
-        left: 0px;
+        .topLeft;
         background: linear-gradient(to bottom, transparent 50%, #0046ae 50%, #0046ae 83.5%, #ffd600 83.5%);
     }
 }
