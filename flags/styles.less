@@ -351,3 +351,35 @@ body {
         background: url("burundi_sym.svg") 28px 7px no-repeat, url("burundi_sym.svg") 10px 38px no-repeat, url("burundi_sym.svg") 45px 38px no-repeat, white;
     }
 }
+
+.seychelles {
+    .heightWidth(100px,
+    200px);
+    .margins;
+    background: linear-gradient(128deg, #003882 0px, #003882 62.6px, transparent 51.6px), linear-gradient(147deg, #fcd647 84px, transparent 84px), linear-gradient(-198deg, #d12421 95px, transparent 95px), linear-gradient(-189deg, white 98px, transparent 98px), #007336;
+}
+
+.grenada {
+    .heightWidth(150px,
+    250px);
+    .margins;
+    background: linear-gradient(to bottom, #f54029 21px, transparent 21px), linear-gradient(to top, #f54029 21px, transparent 21px), linear-gradient(to left, #f54029 21px, transparent 21px), linear-gradient(to right, #f54029 21px, transparent 21px), #fae042;
+    position: relative;
+    &::before {
+        .content_position;
+        .topLeft;
+        .heightWidth(150px,
+        250px);
+        clip-path: polygon(21px 21px, 125px 75px, 229px 21px, 229px 129px, 125px 75px, 21px 129px, 21px 21px);
+        background: #007d69;
+    }
+    &::after {
+        .content_position;
+        .topLeft(-15px,
+        -25px);
+        .heightWidth(180px,
+        250px);
+        background: url("grenada_sym.svg") 75px 0px no-repeat, url("grenada_sym.svg") 125px 0px no-repeat, url("grenada_sym.svg") 175px 0px no-repeat, url("grenada_sym.svg") 75px 130px no-repeat, url("grenada_sym.svg") 125px 130px no-repeat, url("grenada_sym.svg") 175px 130px no-repeat, url("grenada_sym.svg") 105px 45px no-repeat, url("grenada_extra_sym.svg") 52px 69px no-repeat;
+        background-size: 14%, 14%, 14%, 14%, 14%, 14%, 25%, 25%;
+    }
+}
