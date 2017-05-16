@@ -11,6 +11,13 @@ To get started, I am picking the easier ones to reproduce.
 2) Rehoboth -- This nation no longer exists, but had a simpler pattern for me to try out.
 3) Kuwait -- Will refactor in the coming days.
 
+16th May, 2017.
+After few days of working on this project, I happened to learn svg since I had to create some of the map symbols.
+I randomly chose nations from Vexilla Mundi website. I chose maps that didn't have complicated symbols which I
+could easily reproduce by svg.
+
+
+
 
 
 
