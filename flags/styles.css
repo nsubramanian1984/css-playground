@@ -326,5 +326,5 @@ body {
   top: 32.5px;
   left: 82.5px;
   border-radius: 42.5px;
-  background: white;
+  background: url("burundi_sym.svg") 28px 7px no-repeat, url("burundi_sym.svg") 10px 38px no-repeat, url("burundi_sym.svg") 45px 38px no-repeat, white;
 }
