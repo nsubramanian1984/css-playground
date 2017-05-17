@@ -366,3 +366,17 @@ p {
   background: url("grenada_sym.svg") 75px 0px no-repeat, url("grenada_sym.svg") 125px 0px no-repeat, url("grenada_sym.svg") 175px 0px no-repeat, url("grenada_sym.svg") 75px 130px no-repeat, url("grenada_sym.svg") 125px 130px no-repeat, url("grenada_sym.svg") 175px 130px no-repeat, url("grenada_sym.svg") 105px 45px no-repeat, url("grenada_extra_sym.svg") 52px 69px no-repeat;
   background-size: 14%, 14%, 14%, 14%, 14%, 14%, 25%, 25%;
 }
+.israel {
+  height: 160px;
+  width: 220px;
+  margin: 10px;
+  position: relative;
+  background: linear-gradient(to bottom, transparent 9.37%, #002369 9.37%, #002369 25%, transparent 25%, transparent 75%, #002369 75%, #002369 90.6%, transparent 90.6%), white;
+}
+.israel::before {
+  content: url("israel_sym.svg");
+  position: absolute;
+  top: 70px;
+  left: 85px;
+  transform: scale(1.6, 1.5);
+}
