@@ -376,7 +376,14 @@ p {
 .israel::before {
   content: url("israel_sym.svg");
   position: absolute;
-  top: 70px;
+  top: 71px;
   left: 85px;
   transform: scale(1.6, 1.5);
+}
+.india {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+  background: url("chakra.svg") 60px 34px no-repeat, linear-gradient(#f56600 33.3%, white 33.3%, white 66.6%, #00824a 66.6%);
+  background-size: 36%, 100%;
 }
