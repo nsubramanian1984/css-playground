@@ -41,3 +41,25 @@ body {
 .tile.alternate span.hide {
     display: none;
 }
+
+@media screen and (max-width: 800px) {
+    .chessboard {
+        width: 400px;
+        height: auto;
+        border: 5px solid black;
+        margin: 1em auto;
+    }
+    .tile {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: dimgray;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .tile span {
+        font-size: 2em;
+        line-height: 50px;
+        color: wheat;
+    }
+}
