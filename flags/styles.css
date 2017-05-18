@@ -414,3 +414,29 @@ p {
   background: url(phil_sym.svg) 0px 0px no-repeat;
   transform: scale(1);
 }
+.united_kingdom {
+  height: 100px;
+  width: 200px;
+  margin: 10px;
+  background: linear-gradient(26deg, transparent 45%, white 43%, white 55%, transparent 55%), linear-gradient(-26deg, transparent 45%, white 43%, white 55%, transparent 55%), #002776;
+  position: relative;
+}
+.united_kingdom::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 200px;
+  background: #cc0c2f;
+  clip-path: polygon(35% 35%, 0% 0%, 0% 7%, 28% 35%, 35% 35%, 65% 65%, 100% 100%, 100% 93%, 72% 65%, 65% 65%, 65% 35%, 100% 0%, 93% 0%, 58% 35%, 65% 35%, 35% 65%, 0% 100%, 7% 100%, 42% 65%, 35% 65%);
+}
+.united_kingdom::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 200px;
+  background: linear-gradient(to right, transparent 0%, transparent 45%, #cc0c2f 45%, #cc0c2f 55%, transparent 55%, transparent 100%), linear-gradient(to bottom, transparent 0%, transparent 33.33%, white 33.33%, white 40%, #cc0c2f 40%, #cc0c2f 60%, white 60%, white 66.66%, transparent 66.66%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 40%, white 40%, white 60%, transparent 60%, transparent 100%);
+}
