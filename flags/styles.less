@@ -26,9 +26,8 @@ body {
 }
 
 p {
-
     font-size: 1.2em;
-    font-weight:bolder;
+    font-weight: bolder;
     margin: 0.1em;
 }
 
@@ -392,20 +391,47 @@ p {
 }
 
 .israel {
-    .heightWidth(160px, 220px);
+    .heightWidth(160px,
+    220px);
     .margins;
-    position:relative;
-    background: linear-gradient(to bottom, transparent 9.37%, #002369 9.37%, #002369 25%, transparent 25%, transparent 75%,  #002369 75%, #002369 90.6%, transparent 90.6%),white;
+    position: relative;
+    background: linear-gradient(to bottom, transparent 9.37%, #002369 9.37%, #002369 25%, transparent 25%, transparent 75%, #002369 75%, #002369 90.6%, transparent 90.6%), white;
     &::before {
         .content_position(url("israel_sym.svg"));
-        .topLeft(71px, 85px);
-        transform:scale(1.6, 1.5);
+        .topLeft(71px,
+        85px);
+        transform: scale(1.6, 1.5);
     }
 }
 
 .india {
-    .heightWidth(100px, 150px);
+    .heightWidth(100px,
+    150px);
     .margins;
     background: url("chakra.svg") 60px 34px no-repeat, linear-gradient(#f56600 33.3%, white 33.3%, white 66.6%, #00824a 66.6%);
     background-size: 36%, 100%;
+}
+
+.philippines {
+    .heightWidth(90px,
+    180px);
+    .margins;
+    position: relative;
+    background: linear-gradient(to bottom, #0039a7 50%, #c1133d 50%);
+    &::before {
+        .content_position;
+        .topLeft;
+        .heightWidth(90px,
+        180px);
+        clip-path: polygon(0% 0%, 43.3% 50%, 0% 100%);
+        background: white;
+    }
+    ;
+    &::after {
+        .content_position;
+        .topLeft(-5px, 0px);
+        .heightWidth(200px, 200px);
+        background: url(phil_sym.svg) 0px 0px no-repeat;
+        transform: scale(1.0);
+    }
 }

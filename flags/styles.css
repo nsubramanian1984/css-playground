@@ -387,3 +387,30 @@ p {
   background: url("chakra.svg") 60px 34px no-repeat, linear-gradient(#f56600 33.3%, white 33.3%, white 66.6%, #00824a 66.6%);
   background-size: 36%, 100%;
 }
+.philippines {
+  height: 90px;
+  width: 180px;
+  margin: 10px;
+  position: relative;
+  background: linear-gradient(to bottom, #0039a7 50%, #c1133d 50%);
+}
+.philippines::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 90px;
+  width: 180px;
+  clip-path: polygon(0% 0%, 43.3% 50%, 0% 100%);
+  background: white;
+}
+.philippines::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  height: 200px;
+  width: 200px;
+  background: url(phil_sym.svg) 0px 0px no-repeat;
+  transform: scale(1);
+}

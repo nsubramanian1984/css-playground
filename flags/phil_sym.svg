@@ -1,0 +1,33 @@
+<svg width="87" height="100" viewBox="0 0 880 880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <g id="ray" transform="translate(0,-30) scale(1,1.5)">
+            <path d="M 46,50 L 39,25 41,22 47,50 z" stroke="#fcd116" fill="#fcd116" />
+            <path d="M 49,50 L 46,20 50,15 54,20 51,50 z" stroke="#fcd116" fill="#fcd116" />
+            <path d="M 53,50 L 59,22 61,25 54,50 z" stroke="#fcd116" fill="#fcd116" />
+        </g>
+    </defs>
+    <g transform="translate(0, 120) scale(1.75)">
+        <circle cx="150" cy="180" r="50" fill="#fcd116" />
+        <use xlink:href="#ray" x="100" y="90" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(45 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(90 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(135 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(180 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(225 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(270 150 180)" />
+        <use xlink:href="#ray" x="100" y="90" transform="rotate(315 150 180)" />
+    </g>
+
+
+    <g transform="translate(-30,10) scale(0.4) rotate(-45 250 250)">
+        <path d="M 280.90 345.10 L 280.9, 154.89 169.09, 308.77 350, 250  169.09, 191.221" fill="#fcd116" />
+    </g>
+    <g transform="translate(-30,650) scale(0.4) rotate(-25 250 250)">
+        <path d="M 280.90 345.10 L 280.9, 154.89 169.09, 308.77 350, 250  169.09, 191.221" fill="#fcd116" />
+    </g>
+    <g transform="translate(560, 340) scale(0.4)">
+        <path d="M 280.90 345.10 L 280.9, 154.89 169.09, 308.77 350, 250  169.09, 191.221" fill="#fcd116" />
+    </g>
+    <!--<path d="M 0,0 l800,432 l-800,432 z" stroke="red" stroke-width="10" fill="none"/>-->
+
+</svg>
