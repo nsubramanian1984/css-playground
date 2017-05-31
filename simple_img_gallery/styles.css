@@ -1,0 +1,38 @@
+html,
+body {
+    width: 100%;
+    background-color: rgba( 21, 23, 24, 0.227);
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img_container {
+    width: 25%;
+    text-align: center;
+}
+img {
+    width: 152px;
+    height: 216px;
+    border: 5px solid white;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+@media screen and (max-width: 720px) {
+    .img_container {
+        width: 33.3%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .img_container {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .img_container {
+        width: 100%;
+    }
+}
