@@ -1,0 +1,107 @@
+body {
+  background-color: #1c2929;
+}
+
+.container {
+  display: flex;
+  margin-top: 1em;
+  position: relative;
+}
+
+.box-container {
+  display: inline-block;
+  // margin: 200px 110px 0px 100px;
+}
+
+.box-container.second {
+  margin: 0px 200px;
+}
+
+.btn-container input {
+  width: 100px;
+  height: 25px;
+  border: 2px solid white;
+  color: white;
+  background: #009688;
+  font: 12px Verdana;
+}
+
+.btn-container input + input {
+  background: red;
+  margin-left: 20px;
+}
+
+.box {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  transition: transform 1.5s ease-in-out, transform 1s ease-in-out;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font: 1.5em Helvetica;
+  width: 100px;
+  word-wrap: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: mintcream;
+}
+
+div.box[data-state="scale"] {
+  transform: scale(1.1);
+}
+
+.reddit {
+  background-color: #ff4501;
+}
+
+.linkedin {
+  background-color: #007bb6;
+}
+
+.facebook {
+  background-color: #3b579d;
+}
+
+.twitter {
+  background-color: #2caae1;
+}
+
+.btn-container {
+  display: block;
+  position: relative;
+  margin-top: 1em;
+}
+
+.slider {
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}
+
+.box.top {
+  transform: translateY(-150px);
+}
+
+.box.mask {
+  z-index: 5;
+}
+
+.gray {
+  background-color: #1c2929;
+  border-top: 2px solid #1c2929;
+  border-left: 2px solid #1c2929;
+  border-right: 2px solid #1c2929;
+  margin-bottom: -10px;
+}
+
+.placeMeOnTop {
+  z-index: 2;
+}
