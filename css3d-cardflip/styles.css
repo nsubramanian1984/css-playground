@@ -1,0 +1,49 @@
+div {
+
+}
+div.card {
+    width: 250px;
+    height: 350px;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+div.card.front {
+    float: left;
+        background-image: linear-gradient(to bottom, lightblue, lightgray);
+}
+
+div.card.back {
+    float: left;
+    margin-left: 10px;
+    background-image: linear-gradient(to bottom, gray, blue);
+}
+
+span {
+    text-align: center;
+}
+
+span.rank_symbol {
+    font-size: 120px;
+    /* border: 1px solid red; */
+    position: relative;
+    left: 65px;
+}
+
+span.rank_letter, span.suit_letter {
+    font-size: 75px;
+    /* border: 1px solid red; */
+}
+
+span.rank_letter.top_left, span.rank_letter.bottom_left {
+    position: relative;
+    top: 10px;
+    left: 10px;
+
+}
+
+span.suit_letter.top_right, span.suit_letter.bottom_right {
+    position: relative;
+    top: 10px;
+    left: 140px;
+}
