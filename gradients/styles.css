@@ -1,0 +1,58 @@
+body {
+    background: whitesmoke;
+}
+p {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin: 0.1em;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flag {
+    border: 2px solid teal;
+    text-align: center;
+    margin: 1em;
+    height: 100px;
+    width: 100%;
+}
+.andorra {
+    background: linear-gradient(to right, #0064be, #ffd200, #d7073a);
+}
+.cameroon {
+    background: linear-gradient(to right, #00ae42, #cc0c2f, #fddc42);
+}
+.laos {
+    background: linear-gradient(to right, #cf142b, #171796, #cf142b);
+}
+.india {
+    background: linear-gradient(to right, #f56600, #ffffff, #00824a);
+}
+.ivory_coast {
+    background: linear-gradient(to right, #f38d39, #ffffff, #339d10);
+}
+.sierra_leone {
+    background: linear-gradient(to right, #719601, #ffffff, #4891dc);
+}
+.slovenia {
+    background: linear-gradient(to right, #ffffff, #0046ae, #d7073a);
+}
+.solomon_islands {
+    background: linear-gradient(to right, #0064be, #00694e, #fddc42, #ffffff);
+}
+.south_korea {
+    background: linear-gradient(to right, #fff, #cc0c2f, #003478, #000000);
+}
+.spain {
+    background: linear-gradient(to right, #cd0d2d, #fcd116, #cd0d2d);
+}
+.sri_lanka {
+    background: linear-gradient(to right, #ffcb00, #007836, #ff7a00, #9b243e);
+}
+.sweden {
+    background: linear-gradient(to right, #005194, #ffcb00);
+}
+.zimbabwe {
+    background: linear-gradient(to right, #008443, #ffc92f, #e80033, #000000, #ffffff, #000000, #e80033, #ffc92f, #008443);
+}
