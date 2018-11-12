@@ -1,0 +1,52 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 600px;
+    height: 150px;
+    border: 2px solid gray;
+    margin: 200px auto;
+    display: flex;
+    padding: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    margin: 25px 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#box1.box {
+    background-color: limegreen;
+}
+
+#box2.box {
+    background-color: red;
+}
+
+#box3.box {
+    background-color: blue;
+}
+
+#box4.box {
+    background-color: green;
+}
+
+#box5.box {
+    background-color: salmon;
+}
+
+#box1.box.select,
+#box2.box.select,
+#box3.box.select,
+#box4.box.select,
+#box5.box.select {
+
+}
