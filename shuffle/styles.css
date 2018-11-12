@@ -21,6 +21,7 @@ body {
     margin: 25px 10px;
     font-size: 20px;
     color: white;
+    cursor: pointer;
 }
 
 #box1.box {
@@ -48,5 +49,5 @@ body {
 #box3.box.select,
 #box4.box.select,
 #box5.box.select {
-
+    cursor: move;
 }
