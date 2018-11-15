@@ -16,7 +16,6 @@ body {
     width: 100px;
     height: 100px;
     text-align: center;
-    vertical-align: middle;
     line-height: 100px;
     margin: 25px 10px;
     font-size: 20px;
@@ -25,25 +24,26 @@ body {
 }
 
 #box1.box {
-    background-color: limegreen;
+    background-color: #5bc0eb;
 }
 
 #box2.box {
-    background-color: red;
+    background-color: #8a8e3b;
 }
 
 #box3.box {
-    background-color: blue;
+    background-color: #9bc53d;
 }
 
 #box4.box {
-    background-color: green;
+    background-color: #e55934;
 }
 
 #box5.box {
-    background-color: salmon;
+    background-color: #fa7921;
 }
 
+body.select,
 #box1.box.select,
 #box2.box.select,
 #box3.box.select,

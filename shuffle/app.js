@@ -128,10 +128,12 @@ function clicked(event) {
                         elm.setAttribute("class", "box");
                         selectedId = -1;
                         moveDown(elm);
+                        document.body.setAttribute("class", "select");
                     } else {
                         elm.setAttribute("class", "box select");
                         selectedId = id;
                         moveUp(elm);
+                        document.body.setAttribute("class", "select");
                     }
 
                     selected = !selected;
