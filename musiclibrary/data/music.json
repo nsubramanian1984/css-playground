@@ -1,0 +1,298 @@
+[{
+    "name": "Radiohead",
+    "albums": [{
+        "title": "The King of Limbs",
+        "songs": [{
+            "title": "Bloom",
+            "length": "5:15"
+        }, {
+            "title": "Morning Mr Magpie",
+            "length": "4:41"
+        }, {
+            "title": "Little by Little",
+            "length": "4:27"
+        }, {
+            "title": "Feral",
+            "length": "3:13"
+        }, {
+            "title": "Lotus Flower",
+            "length": "5:01"
+        }, {
+            "title": "Codex",
+            "length": "4:47"
+        }, {
+            "title": "Give Up the Ghost",
+            "length": "4:50"
+        }, {
+            "title": "Separator",
+            "length": "5:20"
+        }],
+        "released": "18 February 2011"
+    }, {
+        "title": "OK Computer",
+        "songs": [{
+            "title": "Airbag",
+            "length": "4:44"
+        }, {
+            "title": "Paranoid Android",
+            "length": "6:23"
+        }, {
+            "title": "Subterranean Homesick Alien",
+            "length": "4:27"
+        }, {
+            "title": "Exit Music (For a Film)",
+            "length": "4:24"
+        }, {
+            "title": "Let Down",
+            "length": "4:59"
+        }, {
+            "title": "Karma Police",
+            "length": "4:21"
+        }, {
+            "title": "Fitter Happier",
+            "length": "1:57"
+        }, {
+            "title": "Electioneering",
+            "length": "3:50"
+        }, {
+            "title": "Climbing Up the Walls",
+            "length": "4:45"
+        }, {
+            "title": "No Surprises",
+            "length": "3:48"
+        }, {
+            "title": "Lucky",
+            "length": "4:19"
+        }, {
+            "title": "The Tourist",
+            "length": "5:24"
+        }],
+        "released": "16 June 1997"
+    }]
+}, {
+    "name": "Portishead",
+    "albums": [{
+        "title": "Dummy",
+        "songs": [{
+            "title": "Mysterons",
+            "length": "5:02"
+        }, {
+            "title": "Sour Times",
+            "length": "4:11"
+        }, {
+            "title": "Strangers",
+            "length": "3:55"
+        }, {
+            "title": "It Could Be Sweet",
+            "length": "4:16"
+        }, {
+            "title": "Wandering Star",
+            "length": "4:51"
+        }, {
+            "title": "It's a Fire",
+            "length": "3:49"
+        }, {
+            "title": "Numb",
+            "length": "3:54"
+        }, {
+            "title": "Roads",
+            "length": "5:02"
+        }, {
+            "title": "Pedestal",
+            "length": "3:39"
+        }, {
+            "title": "Biscuit",
+            "length": "5:01"
+        }, {
+            "title": "Glory Box",
+            "length": "5:06"
+        }],
+        "released": "22 August 1994"
+    }, {
+        "title": "Third",
+        "songs": [{
+            "title": "Silence",
+            "length": "4:58"
+        }, {
+            "title": "Hunter",
+            "length": "3:57"
+        }, {
+            "title": "Nylon Smile",
+            "length": "3:16"
+        }, {
+            "title": "The Rip",
+            "length": "4:29"
+        }, {
+            "title": "Plastic",
+            "length": "3:27"
+        }, {
+            "title": "We Carry On",
+            "length": "6:27"
+        }, {
+            "title": "Deep Water",
+            "length": "1:31"
+        }, {
+            "title": "Machine Gun",
+            "length": "4:43"
+        }, {
+            "title": "Small",
+            "length": "6:45"
+        }, {
+            "title": "Magic Doors",
+            "length": "3:32"
+        }, {
+            "title": "Threads",
+            "length": "5:45"
+        }],
+        "released": "28 April 2008"
+    }]
+}, {
+    "name": "Kenny Loggins",
+    "albums": [{
+        "title": "How About Now",
+        "songs": [{
+            "title": "A Year's Worth of Distance",
+            "length": "5:45"
+        }, {
+            "title": "A Love Song",
+            "length": "3:54"
+        }, {
+            "title": "I'll Remember Your Name",
+            "length": "4:36"
+        }, {
+            "title": "How About Now",
+            "length": "3:59"
+        }, {
+            "title": "I Don't Want to Hate You Anymore",
+            "length": "4:58"
+        }, {
+            "title": "That's When I Find You",
+            "length": "4:49"
+        }, {
+            "title": "If You Never Been There",
+            "length": "4:19"
+        }, {
+            "title": "Truth Is",
+            "length": "4:02"
+        }, {
+            "title": "Too Much (Never Get Enough)",
+            "length": "3:56"
+        }, {
+            "title": "This Too Will Pass",
+            "length": "6:06"
+        }, {
+            "title": "I'm a Free Man Now",
+            "length": "4:35"
+        }, {
+            "title": "One Last Goodbye Song",
+            "length": "3:45"
+        }],
+        "released": "20 February 2007"
+    }, {
+        "title": "December",
+        "songs": [{
+            "title": "Walking in the Air",
+            "length": "5:23"
+        }, {
+            "title": "The Christmas Song",
+            "length": "4:34"
+        }, {
+            "title": "The Bells of Christmas",
+            "length": "5:58"
+        }, {
+            "title": "Coventry Carol",
+            "length": "3:08"
+        }, {
+            "title": "Christmas Time Is Here",
+            "length": "5:03"
+        }, {
+            "title": "Angels in the Snow",
+            "length": "5:07"
+        }, {
+            "title": "White Christmas",
+            "length": "3:53"
+        }, {
+            "title": "Some Children See Him",
+            "length": "4:58"
+        }, {
+            "title": "On Christmas Morning",
+            "length": "4:11"
+        }, {
+            "title": "Have Yourself a Merry Little Christmas",
+            "length": "5:18"
+        }, {
+            "title": "December",
+            "length": "5:38"
+        }],
+        "released": "13 October 1998"
+    }]
+},
+{
+    "name": "Michael Jackson",
+    "albums": [{
+        "title": "Thriller",
+        "songs": [{
+            "title": "Wanna Be Startin' Somethin'",
+            "length": "6:02"
+        }, {
+            "title": "Baby Be Mine",
+            "length": "4:20"
+        }, {
+            "title": "The Girl Is Mine" ,
+            "length": "3:41"
+        }, {
+            "title": "Thriller",
+            "length": "5:57"
+        }, {
+            "title": "Beat It",
+            "length": "4:18"
+        }, {
+            "title": "Billie Jean",
+            "length": "4:54"
+        }, {
+            "title": "Human Nature",
+            "length": "4:07"
+        }, {
+            "title": "P.Y.T. (Pretty Young Thing)",
+            "length": "3:58"
+        }, {
+            "title": "The Lady in My Life",
+            "length": "4:59"
+        }],
+        "released": "30 November 1982"
+    }, {
+        "title": "Bad",
+        "songs": [{
+            "title": "Bad",
+            "length": "4:08"
+        }, {
+            "title": "The Way You Make Me Feel",
+            "length": "4:59"
+        }, {
+            "title": "Speed Demon",
+            "length": "4:03"
+        }, {
+            "title": "Liberian Girl",
+            "length": "3:55"
+        }, {
+            "title": "Just Good Friends",
+            "length": "4:09"
+        }, {
+            "title": "Another Part of Me",
+            "length": "3:55"
+        }, {
+            "title": "Man in the Mirror",
+            "length": "5:21"
+        }, {
+            "title": "I Just Can't Stop Loving You",
+            "length": "4:27"
+        }, {
+            "title": "Dirty Diana",
+            "length": "4:42"
+        }, {
+            "title": "Smooth Criminal",
+            "length": "4:20"
+        }],
+        "released": "1 September 1987"
+    }]
+}]

@@ -1,34 +1,45 @@
+function getValueFromStyle(str) {
+    let regex = /(\d+\.?\d+)|(\d+)/g;
+    return regex.exec(str)[0];
+}
 
-function moveLeft(elm) {
-    // console.log(elm.style.transform);
+function moveLeftOrRight(elm, isLeft) {
+    let negation = -1;
+
+    let computedStyle = window.getComputedStyle(elm);
+
+    let width = Number(getValueFromStyle(computedStyle.width));
+    let marginLeft = Number(getValueFromStyle(computedStyle.marginLeft));
+    let marginRight = Number(getValueFromStyle(computedStyle.marginRight));
+
+    let sum = (width + marginLeft + marginRight);
+
+    if (isLeft) {
+        sum = sum * negation;
+        console.log(sum);
+    }
+
     if (elm.style.transform === null || elm.style.transform === undefined || elm.style.transform === "")
-        elm.style.transform = 'translate(-120px, 0px)';
+        elm.style.transform = `translate(${sum}px, 0px)`; // 'translate(-120px, 0px)';
     else {
         let elmTransform = elm.style.transform;
-        let regex = /([-]?\d+)/g;
+        let regex = /([-]?\d+\.?\d+)|([-]?\d+)/g;
         let translatedX = regex.exec(elmTransform)[0];
         let translatedY = regex.exec(elmTransform)[0];
-        let newValue = Number(translatedX) - 120;
+        let newValue = Number(translatedX) + sum;
 
         // console.log(newValue);
         elm.style.transform = `translate(${newValue}px, ${translatedY}px)`;
     }
+
+}
+
+function moveLeft(elm) {
+    moveLeftOrRight(elm, true);
 }
 
 function moveRight(elm) {
-    // console.log(elm.style.transform);
-    if (elm.style.transform === null || elm.style.transform === undefined || elm.style.transform === "")
-        elm.style.transform = 'translate(120px, 0px)';
-    else {
-        let elmTransform = elm.style.transform;
-        let regex = /([-]?\d+)/g;
-        let translatedX = regex.exec(elmTransform)[0];
-        let translatedY = regex.exec(elmTransform)[0];
-        let newValue = Number(translatedX) + 120;
-
-        // console.log(newValue);
-        elm.style.transform = `translate(${newValue}px, ${translatedY}px)`;
-    }
+    moveLeftOrRight(elm);
 }
 
 function moveUp(elm) {
@@ -37,12 +48,11 @@ function moveUp(elm) {
         elm.style.transform = 'translate(0px, -20px)';
     else {
         let elmTransform = elm.style.transform;
-        let regex = /([-]?\d+)/g;
+        let regex = /([-]?\d+\.?\d+)|([-]?\d+)/g;
         let translatedX = regex.exec(elmTransform)[0];
         let translatedY = regex.exec(elmTransform)[0];
         let newValue = Number(translatedY) - 20;
 
-        // console.log(newValue);
         elm.style.transform = `translate(${translatedX}px, ${newValue}px)`;
     }
 }
@@ -53,17 +63,17 @@ function moveDown(elm) {
         elm.style.transform = 'translate(0px, 0px)';
     else {
         let elmTransform = elm.style.transform;
-        let regex = /([-]?\d+)/g;
+        let regex = /([-]?\d+\.?\d+)|([-]?\d+)/g;
         let translatedX = regex.exec(elmTransform)[0];
         let translatedY = regex.exec(elmTransform)[0];
         let newValue = Number(translatedY) + 20;
 
-        // console.log(newValue);
         elm.style.transform = `translate(${translatedX}px, ${newValue}px)`;
     }
 }
 
 function hovered(event) {
+    // console.log(event.target.id);
 
     if (selected && selectedId !== -1) {
         if (event && event.target) {
@@ -80,15 +90,15 @@ function hovered(event) {
 
             let regex1 = /([-]?\d+)/g;
             let hoveredItemStyleTransform = hoveredItem.style.transform;
-        	let hoveredItemStyleTranslatedX = hoveredItemStyleTransform !== "" ? regex1.exec(hoveredItemStyleTransform)[0] : 0;
-        	let newValueHoveredItem = Number(hoveredItemStyleTranslatedX) + hoveredItem.offsetLeft;
-        	// console.log(hoveredItem.offsetLeft, hoveredItemStyleTranslatedX, newValueHoveredItem);
+            let hoveredItemStyleTranslatedX = hoveredItemStyleTransform !== "" ? regex1.exec(hoveredItemStyleTransform)[0] : 0;
+            let newValueHoveredItem = Number(hoveredItemStyleTranslatedX) + hoveredItem.offsetLeft;
+            // console.log(hoveredItem.offsetLeft, hoveredItemStyleTranslatedX, newValueHoveredItem);
 
-        	let regex2 = /([-]?\d+)/g;
-        	let selectedItemStyleTransform = selectedItem.style.transform;
-        	let selectedItemStyleTranslatedX = selectedItemStyleTransform !== "" ? regex2.exec(selectedItemStyleTransform)[0] : 0;
-        	let newValueSelectedItem = Number(selectedItemStyleTranslatedX) + selectedItem.offsetLeft;
-        	// console.log(selectedItem.offsetLeft, selectedItemStyleTranslatedX, newValueSelectedItem);
+            let regex2 = /([-]?\d+)/g;
+            let selectedItemStyleTransform = selectedItem.style.transform;
+            let selectedItemStyleTranslatedX = selectedItemStyleTransform !== "" ? regex2.exec(selectedItemStyleTransform)[0] : 0;
+            let newValueSelectedItem = Number(selectedItemStyleTranslatedX) + selectedItem.offsetLeft;
+            // console.log(selectedItem.offsetLeft, selectedItemStyleTranslatedX, newValueSelectedItem);
 
             if (newValueSelectedItem > newValueHoveredItem) {
                 // console.log("move current item in focus to right");
@@ -101,6 +111,8 @@ function hovered(event) {
             }
         }
     }
+
+
 }
 
 function movedOut(event) {
@@ -157,7 +169,6 @@ for (let idx = 0; idx < boxes.length; idx++) {
     e1.addEventListener("mouseover", hovered);
     e1.addEventListener("mouseout", movedOut);
 }
-
 
 // var mouseX;
 
